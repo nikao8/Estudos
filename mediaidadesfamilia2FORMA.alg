@@ -1,8 +1,8 @@
 algoritmo "ex4 maneira 2"
-// Função : Calculo media de idade das familias
+// FunÃ§Ã£o : Calculo media de idade das familias
 // Autor : Nicolas  Marques
 
-// ESSA É A SEGUNDA MANEIRA DE INTERPRETAR O ENUNCIADO DA QUESTAO 4, LOGO-
+// ESSA Ã‰ A SEGUNDA MANEIRA DE INTERPRETAR O ENUNCIADO DA QUESTAO 4, LOGO-
 // FIZ DOS DOIS JEITOS.
 
 var
@@ -20,7 +20,7 @@ escreva ("Insira a ", contador, " idade -> ")
 leia (idade[contador])
 escreval()
      se (idade[contador] >0) e (idade[contador]<= 12) entao
-     escreval("Categoria [CRIANÇA]")
+     escreval("Categoria [CRIANÃ‡A]")
      fimse
 
      se (idade[contador] >12) e (idade[contador]<= 18) entao
@@ -42,14 +42,14 @@ escreval()
 fimpara
 
 para contador de 1 ate 10 faca
-med <-med + idade[contador] /5
+med <-med + idade[contador] /10
 fimpara
 
 escreval("---------------------------------------------------------------------------------")
 escreval()
 
 
-escreval ("A media de idade do grupo é: ",med)
+escreval ("A media de idade do grupo Ã©: ",med)
 escreval()
 escreval("---------------------------------------------------------------------------------")
 escreval()
