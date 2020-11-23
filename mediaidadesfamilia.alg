@@ -1,5 +1,5 @@
 algoritmo "ex4"
-// Função : Calculo media de idade das familias
+// FunÃ§Ã£o : Calculo media de idade das familias
 // Autor : Nicolas  Marques
 var
 idade: vetor [1..10] de inteiro
@@ -17,32 +17,32 @@ leia (idade[contador])
 fimpara
 
 para contador de 1 ate 10 faca
-med <-med + idade[contador] /5
+med <-med + idade[contador] /10
 
 fimpara
 
 se (med>0) e (med <=12) entao
 escreval()
-escreval ("A media de idade desse grupo é:",med," logo ele é classificado como [CRIANÇA]")
+escreval ("A media de idade desse grupo Ã©:",med," logo ele Ã© classificado como [CRIANÃ‡A]")
 fimse
 
 se (med > 12) e (med <= 18) entao
 escreval()
-escreval ("A media de idade desse grupo é:",med," logo ele é classificado como [ADOLESCENTE]")
+escreval ("A media de idade desse grupo Ã©:",med," logo ele Ã© classificado como [ADOLESCENTE]")
 fimse
 
 se (med > 18) e (med <= 39) entao
 escreval()
-escreval ("A media de idade desse grupo é:",med," logo ele é classificado como [JOVEM]")
+escreval ("A media de idade desse grupo Ã©:",med," logo ele Ã© classificado como [JOVEM]")
 fimse
 
 se (med > 39) e (med <= 59) entao
 escreval()
-escreval ("A media de idade desse grupo é:",med," logo ele é classificado como [EXPERIENTE]")
+escreval ("A media de idade desse grupo Ã©:",med," logo ele Ã© classificado como [EXPERIENTE]")
 fimse
 
 se (med > 59) entao
 escreval()
-escreval ("A media de idade desse grupo é:",med," logo ele é classificado como [IDOSO]")
+escreval ("A media de idade desse grupo Ã©:",med," logo ele Ã© classificado como [IDOSO]")
 fimse
 fimalgoritmo
