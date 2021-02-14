@@ -6,7 +6,7 @@ contador: inteiro
 vet: vetor [1..4] de real
 acumulador: real
 inicio
-escreva ("Esse È um software de calculo da sua situaÁ„o escolar !!!")
+escreva ("Esse √© um software de calculo da sua situa√ß√£o escolar !!!")
 escreval()
 escreval()
 
@@ -17,7 +17,7 @@ escreva (contador," nota -> ")
 leia (vet[contador])
 
 enquanto (vet[contador]<0) ou (vet[contador]>10) faca
-escreval ("A sua nota", contador," È inv·lida, digite-a novamente.")
+escreval ("A sua nota", contador," √© inv√°lida, digite-a novamente.")
 escreva (contador," nota -> ")
 leia (vet[contador])
 
@@ -33,26 +33,26 @@ med<- acumulador/4
 
 fimpara
 
-escreval ("Sua mÈdia È -> ",med)
+escreval ("Sua m√©dia √© -> ",med)
 escreval()
 
 
 se (med >= 6) entao
-escreval ("ParabÈns voce foi APROVADO !!!")
+escreval ("Parab√©ns voce foi APROVADO !!!")
 escreval()
 fimse
 
 se (med <= 5.9) e (med >= 3) entao
-escreval ("Voce est· de PROVA FINAL, consulte a data e hora da prova na direÁ„o.")
+escreval ("Voce est√° de PROVA FINAL, consulte a data e hora da prova na dire√ß√£o.")
 escreval()
 fimse
 
 se (med <= 2.9) entao
-escreval ("Voce est· REPROVADO, estude mais na proxima !!!.")
+escreval ("Voce est√° REPROVADO, estude mais na proxima !!!.")
 escreval()
 fimse
 
-escreval ("Se houver alguma d˙vida visite a secretaria da escola !!!")
+escreval ("Se houver alguma d√∫vida visite a secretaria da escola !!!")
 escreval()
 escreval ("Bons estudos !!!.")
 fimalgoritmo
