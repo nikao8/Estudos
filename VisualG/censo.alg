@@ -1,5 +1,5 @@
 algoritmo "ex2"
-// FunÁ„o :   censo
+// Fun√ß√£o :   censo
 // Autor :   Nicolas Marques
 
 var
@@ -8,11 +8,11 @@ contador: inteiro
 receber: inteiro
 inicio
 
-escreval ("Esse È um calculo do censo de familias 2020...")
+escreval ("Esse √© um calculo do censo de familias 2020...")
 escreval()
-escreval ("Insira a quantidade de pessoas na famÌlia")
+escreval ("Insira a quantidade de pessoas na fam√≠lia")
 para contador de 1 ate 10 passo 1 faca
-     escreva ("FamÌlia " ,contador,"-> ")
+     escreva ("Fam√≠lia " ,contador,"-> ")
      leia (familia[contador])
 fimpara
 escreval()
@@ -24,6 +24,6 @@ para contador de 1 ate 10 faca
      fimse
 fimpara
 escreval()
-escreval ("Vale lembrar que n„o È exibido famÌlias com menos de 5 pessoas !!!")
+escreval ("Vale lembrar que n√£o √© exibido fam√≠lias com menos de 5 pessoas !!!")
 
 fimalgoritmo
