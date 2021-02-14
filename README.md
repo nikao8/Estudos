@@ -1,6 +1,6 @@
 # Estudos de T.I
 
-Repositório direcionado a exercícios de programação, redes, cyber security etc
+Repositório direcionado a exercícios de programação, hardware, redes, cyber security etc
 
 ## Índice
 
