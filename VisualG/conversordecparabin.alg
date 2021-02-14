@@ -1,14 +1,14 @@
 algoritmo "ex3"
-// FunÁ„o :   converter decimal para binario
+// Fun√ß√£o :   converter decimal para binario
 // Autor :    Nicolas Marques
 var
 enter, acumulador: inteiro
 res: caracter
 sair: caracter
 inicio
-escreval ("Este È um conversor de base decimal para base bin·ria !!!")
+escreval ("Este √© um conversor de base decimal para base bin√°ria !!!")
 escreval()
-escreval ("Insira um n˙mero para que o mesmo seja convertido em bin·rio...")
+escreval ("Insira um n√∫mero para que o mesmo seja convertido em bin√°rio...")
 
 leia (enter)
 acumulador <- (enter)
@@ -24,7 +24,7 @@ enquanto (enter > 0) faca
        enter <- (enter) div 2
 fimenquanto
 escreval()
-escreval (acumulador, " È " , res, " na base bin·ria." )
+escreval (acumulador, " √© " , res, " na base bin√°ria." )
 
 escreval()
 escreval()
