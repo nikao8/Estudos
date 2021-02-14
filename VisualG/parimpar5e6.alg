@@ -1,5 +1,5 @@
 algoritmo "ex5e6"
-// Função : armazenar 10 numeros e mostrar em par ou impar
+// FunÃ§Ã£o : armazenar 10 numeros e mostrar em par ou impar
 // Autor : Nicolas Marques
 // exercicio 5 e 6 da lista
 var
@@ -13,11 +13,11 @@ inicio
 // esse foi foda janio, tive que procurar ajuda na net
 
 para contador de 1 ate 10 faca
-escreval ("Insira um número de sua escolha: ")
+escreval ("Insira um nÃºmero de sua escolha: ")
 leia (numero)
 
 enquanto (numero = 0) faca
-      escreval("Zero é inválido. digite um número válido")
+      escreval("Zero Ã© invÃ¡lido. digite um nÃºmero vÃ¡lido")
       leia(numero)
 fimenquanto
 
