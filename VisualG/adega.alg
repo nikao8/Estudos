@@ -44,7 +44,7 @@ para contador de 1 ate 3 faca
 fimpara
 //1
 contador <- 1
-escreval ("porcentagem do vinho ", contador, " é -> ",porra)
+escreval ("porcentagem do vinho ", contador, " Ã© -> ",porra)
 //------------
 para contador de 1 ate 3 passo 1 faca
 
@@ -60,7 +60,7 @@ para contador de 1 ate 3 faca
 fimpara
   //2
 contador <- 2
-escreval ("porcentagem do vinho ", contador, " é -> ",porra)
+escreval ("porcentagem do vinho ", contador, " Ã© -> ",porra)
 
 //------------------
 para contador de 1 ate 3 passo 1 faca
@@ -71,7 +71,7 @@ porra <- (porcent) / (acumulador)
 fimpara
 // 3
 contador <- 3
-escreval ("porcentagem do vinho ", contador, " é -> ",porra)
+escreval ("porcentagem do vinho ", contador, " Ã© -> ",porra)
 
 escreval ("Aperte [f] e tecle [Enter] para finalizar o programa")
  leia (finalize)
