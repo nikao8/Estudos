@@ -18,7 +18,7 @@ para contador de 1 ate 5 passo 1 faca
 escreval (contador,"-> ",names[contador])
 fimpara
 
-escreval ("Estes são os números de forma inversa: ")
+escreval ("Estes sÃ£o os nÃºmeros de forma inversa: ")
 
 para contador de 5 ate 1 passo -1 faca
 escreval (contador,"-> ",names[contador])
