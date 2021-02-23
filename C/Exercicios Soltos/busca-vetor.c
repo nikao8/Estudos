@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    
-    int i = 0, finder;
+int main() 
+{
+
+    int i = 0, finder, x=0;
     int vet[15];
     
     for(i = 0; i < 15; i++)
@@ -17,11 +18,18 @@ int main() {
     scanf ("%i", &finder);
 
     for(i = 0; i < 15; i++)
-    {        
-        if (finder == vet[i])
+    {       
+        if (vet[i] == finder)
         {            
-            printf ("A posicao do vetor que contenha o numero buscado eh vet[%i]", i);
-        }     
+            printf ("\nA posicao do vetor que contenha o numero buscado eh vet[%i]", i);
+            x = 1;        
+        }
+
+    }
+    
+    if (x == 0)
+    {
+        printf("\nNumero nao encontrado!");
     }
 
     return 0;
