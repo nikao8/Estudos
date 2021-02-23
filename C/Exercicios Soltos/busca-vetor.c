@@ -6,7 +6,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
     int i = 0, finder;
     int vet[15];
-    int result;
+    
     for(i = 0; i < 15; i++){
         printf("Digite um numero a popular o vetor[%i]: \n", i);
         scanf("%i", &vet[i]);
