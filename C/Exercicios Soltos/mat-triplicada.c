@@ -24,7 +24,7 @@ int main()
     {
         for (j = 0; j < 4; j++)
         {            
-            printf ("%i ", A[i][j]);
+            printf ("%i\t", A[i][j]);
         }
         printf ("\n");
             
@@ -37,7 +37,7 @@ int main()
         for (j = 0; j < 4; j++)
         {
             B[i][j] = A[i][j] * 3;
-            printf ("%i ", B[i][j]);
+            printf ("%i\t", B[i][j]);
         }
         printf ("\n");
             
