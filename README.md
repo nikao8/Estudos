@@ -1,5 +1,4 @@
 # Estudos de T.I
-testyyyyyyyyy
 Repositório direcionado a exercícios de programação, hardware, redes, cyber security etc
 
 ## Índice
