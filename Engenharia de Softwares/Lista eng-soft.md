@@ -11,13 +11,13 @@ significantes.
   
 2. Explique como o uso universal da Internet mudou os sistemas de software. (Sua Opinião)
 
-  > A globalização da Internet afetou nos sistemas de software no que tange a integração de usuários e sistemas , e o dever de ter um sistema arquitetado a nível de
+  > A globalização da Internet afetou nos sistemas de software no que tange a integração de usuários e sistemas , e o dever de ter um sistema arquitetado a nível de 
   >
-  > alcance global que sustente os pilares de uma Engenharia de Software. 
+  > alcance global que sustente os pilares de uma Engenharia de Software.  
   
 3. O que são softwares personalizados?
 
-  > Um software personalizado é aquele software projetado e arquitetado exclusivamente para um tipo de negócio contratado, atendendo assim, as caracteristicas específicas           > 
+  > Um software personalizado é aquele software projetado e arquitetado exclusivamente para um tipo de negócio contratado, atendendo assim, as caracteristicas específicas         > 
   > requisitadas do trabalho contratado.
   
 4. Qual a diferença entre um software e um sistema? Qual dos dois
