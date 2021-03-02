@@ -11,9 +11,9 @@ significantes.
   
 2. Explique como o uso universal da Internet mudou os sistemas de software. (Sua Opinião)
 
-  > A globalização da Internet afetou nos sistemas de software no que tange a integração de usuários e sistemas , e o dever de ter um sistema arquitetado a nível de 
-  >
-  > alcance global que sustente os pilares de uma Engenharia de Software.  
+  > A globalização da Internet afetou nos sistemas de software no que tange a integração de usuários e sistemas , e o dever de ter um sistema arquitetado a nível de alcance        global que sustente os pilares de uma Engenharia de Software.
+  
+     
   
 3. O que são softwares personalizados?
 
