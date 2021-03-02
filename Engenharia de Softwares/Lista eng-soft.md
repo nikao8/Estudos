@@ -22,7 +22,6 @@ significantes.
 conceitos é mais amplo? Por quê?
 
   > Um software é um conjunto de instruções, já o sistema se trata de um "mix" de programas e softwares complexos com configuração e estrutura própria.
-  >
   > O sistema é mais amplo, por alcançar um nível de complexibilidade e possibilidades do que somente um software.
   
 5. Qual a principal vantagem do modelo espiral de processo de software?
