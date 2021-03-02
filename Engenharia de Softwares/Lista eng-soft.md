@@ -76,6 +76,5 @@ a mudancas (desconsidere prototipacao e entrega incremental).
 modelo no que diz respeito a comunicação com os clientes?
 
   > O protótipo nada mais é que um  estágio inicial do projeto. é importante o cuidado com o cliente no que tange a clareza de 
-  >
   > especificações do projeto e a flexibilidade do protótipo, tendo em vista que o cliente pode tirar ou inserir uma nova finalidade à ele.    
    
