@@ -57,7 +57,7 @@ a planejar viagens com menor impacto ambiental.
   >
   > II - Incremental
   >
-  > III - Evolutivo
+  > III - Espiral
   >
   > IV - Cascata
   
