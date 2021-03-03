@@ -42,16 +42,23 @@ conceitos é mais amplo? Por quê?
 desenvolvido, sugira o modelo genérico de processo de software mais
 adequado para ser usado como base para a gerência do desenvolvimento
 dos sistemas a seguir:
+
 I) Um sistema para controlar o antibloqueio de frenagem de um carro.
+
 II) Um sistema de realidade virtual para dar apoio a manutenção de software.
+
 III) Um sistema de contabilidade para uma universidade, que substitua um
 sistema já existente.
+
 IV) Um sistema interativo de planejamento de viagens que ajude os usuários
 a planejar viagens com menor impacto ambiental.
 
   > I - Espiral
+  >
   > II - Incremental
-  > III - Evolutivo
+  >
+  > III - Espiral
+  >
   > IV - Cascata
   
 9. Sugira por que e importante, no processo de engenharia de requisitos,
