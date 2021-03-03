@@ -185,3 +185,89 @@ int main()
     return 0;
 }
 ```
+4. Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores de consumo.
+Para cada consumidor, são digitados os seguintes dados:
+
+• número do consumidor
+
+• quantidade de kWh consumidos durante o mês
+
+• tipo (código) do consumidor
+
+1-residencial, preço em reais por kWh = 0,3
+
+2-comercial, preço em reais por kWh = 0,5
+
+3-industrial, preço em reais por kWh = 0,7
+
+Os dados devem ser lidos até que seja encontrado o consumidor com número 0 (zero). O
+
+programa deve calcular e imprimir:
+
+• O custo total para cada consumidor
+
+• O total de consumo para os três tipos de consumidor
+
+• Amédia de consumo dos tipos 1 e 2
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int consumidor, tipoConsumidor;
+    float qtdKwh, custoTot=0, med12=0, total=0;
+
+    do
+    {
+        printf ("\nInsira seu numero de consumidor: ");
+        scanf ("%i", &consumidor);
+
+        printf ("\nInsira a quantidade de kWh consumidos no mes: ");
+        scanf ("%f", &qtdKwh);
+
+        printf ("\nInsira o tipo do seu codigo consumidor %i\n\n[1]Residencial\n[2]Comercial\n[3]Industrial\n\n--> ", consumidor);
+        scanf ("%i", &tipoConsumidor);
+
+        switch (tipoConsumidor)
+        {
+            case 0:
+            break;
+            
+            case 1:
+                custoTot += qtdKwh * 0.3;
+                total += qtdKwh;
+                med12 += qtdKwh;
+                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+            break;
+
+            case 2:
+                custoTot += qtdKwh * 0.5;
+                total += qtdKwh;
+                med12 += qtdKwh;
+                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+            break;
+
+            case 3:
+                custoTot += qtdKwh * 0.7;
+                total += qtdKwh;
+                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+            break;
+
+            default:
+                printf ("\nDigito invalido. Refaca a operacao....\n");
+                system ("pause");
+                return main();
+            break;
+        }
+
+    }while(consumidor != 0);
+
+    //system ("cls || clear");
+
+    printf ("\n\nO total de consumo dos 3 tipos de consumidores foi de: %.2f", total);
+    printf ("\nA media de consumo dos tipos 1 e 2 eh de: %.2f", med12 / 2);
+
+    return 0;
+}
+```
