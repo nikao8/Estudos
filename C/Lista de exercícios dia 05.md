@@ -271,3 +271,47 @@ int main()
     return 0;
 }
 ```
+5. Faça um programa em C que permita entrar com o nome, a idade e o sexo de 20 pessoas. O
+programa deve imprimir o nome da pessoa se ela for do sexo masculino e tiver mais de 21 anos.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char nome[51];
+    char sexo;
+    int idade=0, x=0; 
+
+    do
+    {
+        x++;
+
+        printf ("\n------------------------------\nUsuario numero %i\n------------------------------\n\n", x);
+        
+        printf ("Insira seu nome: ");
+        fgets (nome,51,stdin); // Leitura do array string utilizando fgets
+        
+        setbuf(stdin,NULL); // Limpando buffer do teclado para nao dar erro nas proximas leituras....
+
+        printf ("Insira sua idade: ");
+        scanf ("%i", &idade);
+
+        setbuf(stdin,NULL);
+
+        printf ("Insira seu sexo: [H] para homem | [M] para mulher\n--> ");
+        scanf ("%c", &sexo);
+         
+        setbuf(stdin,NULL);
+        
+        if (idade > 21 && sexo == 'h' || sexo == 'H')
+        {
+            printf ("\nOla %s voce tem %i anos!.", nome, idade);
+        }
+   
+    }while (x <= 20);
+    
+    return 0;
+}
+```
