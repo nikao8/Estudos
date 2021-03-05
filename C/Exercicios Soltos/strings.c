@@ -16,8 +16,9 @@ int main()
 
     printf ("%s", str2);
 
+    // setbuf(stdin,NULL); LIMPA O BUFFER DO TECLADO (FAZER DEPOIS DE TODO SCAN)
+    // char variavel[30];
+    // fgets(variavel,30,stdin);
+    // aaaa
     return 0;
 }
-
-
-
