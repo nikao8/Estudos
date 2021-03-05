@@ -315,3 +315,53 @@ int main()
     return 0;
 }
 ```
+6. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas. Após ler os
+dados, imprimir o nome e o valor da alíquota do imposto de renda calculado conforme a tabela a
+seguir:
+
+Salário menor que R$1300 --> ISENTO
+Salário maior ou igual a R$1300 e menor que 2300 --> 10% do salário bruto
+Salário maior ou igual a R$2300 --> 15% do salário bruto
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char nome[51];
+    float salario;
+    int cont = 0;
+
+    do
+    {
+        cont++;
+        printf ("\n\n------------------------------\nUsuario %i\n------------------------------\n", cont);
+        
+        printf ("\nInsira seu nome: ");
+        fgets (nome,51,stdin);
+
+        setbuf(stdin,NULL);
+        
+        printf ("\nInsira seu salario bruto: ");
+        scanf ("%f", &salario); 
+
+        setbuf(stdin,NULL);
+
+        if (salario < 1300)
+        {
+            printf ("\n%s,a sua aliquota de imposto esta na situacao de [ISENTO]", nome);
+        }
+        else if (salario >= 1300 && salario <2300)
+        {
+            printf ("\n%s,a sua aliquota de imposto eh de: %.2f",nome ,salario * 0.10);
+        }
+        else
+        {
+            printf ("\n%s,a sua aliquota de imposto eh de: %.2f",nome ,salario * 0.15);
+        }
+
+    }while (cont <= 10);
+
+    return 0;
+}
+```
