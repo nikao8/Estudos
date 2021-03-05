@@ -321,7 +321,9 @@ dados, imprimir o nome e o valor da alíquota do imposto de renda calculado conf
 seguir:
 
 Salário menor que R$1300 --> ISENTO
+
 Salário maior ou igual a R$1300 e menor que 2300 --> 10% do salário bruto
+
 Salário maior ou igual a R$2300 --> 15% do salário bruto
 ```C
 #include <stdio.h>
