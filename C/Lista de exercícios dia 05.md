@@ -223,50 +223,51 @@ int main()
         printf ("\nInsira seu numero de consumidor: ");
         scanf ("%i", &consumidor);
 
-        printf ("\nInsira a quantidade de kWh consumidos no mes: ");
-        scanf ("%f", &qtdKwh);
-
-        printf ("\nInsira o tipo do seu codigo consumidor %i\n\n[1]Residencial\n[2]Comercial\n[3]Industrial\n\n--> ", consumidor);
-        scanf ("%i", &tipoConsumidor);
-
-        switch (tipoConsumidor)
+        if(consumidor == 0)
         {
-            case 0:
-            break;
-            
-            case 1:
-                custoTot += qtdKwh * 0.3;
-                total += qtdKwh;
-                med12 += qtdKwh;
-                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
-            break;
-
-            case 2:
-                custoTot += qtdKwh * 0.5;
-                total += qtdKwh;
-                med12 += qtdKwh;
-                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
-            break;
-
-            case 3:
-                custoTot += qtdKwh * 0.7;
-                total += qtdKwh;
-                printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
-            break;
-
-            default:
-                printf ("\nDigito invalido. Refaca a operacao....\n");
-                system ("pause");
-                return main();
-            break;
+            printf ("\n\nO total de consumo dos 3 tipos de consumidores foi de: %.2f", total);
+            printf ("\nA media de consumo dos tipos 1 e 2 eh de: %.2f\n\n", med12 / 2);
+            system ("pause");
+            system ("exit");
         }
+        else
+        {   
+            printf ("\nInsira a quantidade de kWh consumidos no mes: ");
+            scanf ("%f", &qtdKwh);
 
-    }while(consumidor != 0);
+            printf ("\nInsira o tipo do seu codigo consumidor %i:\n\n[1]Residencial\n[2]Comercial\n[3]Industrial\n\n--> ", consumidor);
+            scanf ("%i", &tipoConsumidor);
+             
+            switch (tipoConsumidor)
+            {            
+                case 1:
+                    custoTot += qtdKwh * 0.3;
+                    total += qtdKwh;
+                    med12 += qtdKwh;
+                    printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+                break;
 
-    //system ("cls || clear");
+                case 2:
+                    custoTot += qtdKwh * 0.5;
+                    total += qtdKwh;
+                    med12 += qtdKwh;
+                 printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+                break;
 
-    printf ("\n\nO total de consumo dos 3 tipos de consumidores foi de: %.2f", total);
-    printf ("\nA media de consumo dos tipos 1 e 2 eh de: %.2f", med12 / 2);
+                case 3:
+                    custoTot += qtdKwh * 0.7;
+                    total += qtdKwh;
+                    printf ("\nO custo total do consumidor %i eh de: %.2f\n", consumidor, custoTot);
+                break;
+
+                default:
+                    printf ("\nDigito invalido. Refaca a operacao....\n");
+                    system ("pause");
+                    return main();
+                break;
+            }
+        }
+    }while (consumidor != 0);
 
     return 0;
 }
