@@ -316,7 +316,6 @@ int main()
     return 0;
 }
 ```
-<<<<<<< HEAD
 6. Faça um programa que permita entrar com o nome e o salário bruto de 10 pessoas. Após ler os
 dados, imprimir o nome e o valor da alíquota do imposto de renda calculado conforme a tabela a
 seguir:
@@ -367,5 +366,3 @@ int main()
     return 0;
 }
 ```
-=======
->>>>>>> b1ed1fa31b9dcdbe97824abbec99a2e510de18ce
