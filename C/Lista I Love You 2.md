@@ -45,7 +45,7 @@ void main()
 {
     int n1,n2,n3;
     
-    printf ("insira suas 3 notas em seguida: \n");
+    printf ("Insira as suas 3 notas em seguida: \n");
     scanf ("%i", &n1);
     scanf ("%i", &n2);
     scanf ("%i", &n3);
