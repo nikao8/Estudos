@@ -184,7 +184,6 @@ float hipotenusa(float c1, float c2)
 
 void main()
 {
-
     float n1,n2;
 
     printf ("Insira os dois catetos de um triangulo retângulo para descobrir a hipotenusa: \n");
