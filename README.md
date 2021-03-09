@@ -14,4 +14,4 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
 
 - [Cyber Security](https://github.com/nikao8/Estudos/tree/main/InfoSec)
-  - [Repositório compartilhado InfoSec](https://github.com/nikao8/study/tree/main/InfoSec)
+  - [Repositório compartilhado InfoSec](https://github.com/3rdglaz/study/tree/main/InfoSec)
