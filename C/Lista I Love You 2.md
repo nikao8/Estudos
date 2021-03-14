@@ -375,6 +375,8 @@ int main()
 de 5 produtos em 5 armazéns de uma empresa, conforme figura
 abaixo:
 
+![Estoque](https://user-images.githubusercontent.com/67568578/111078693-8b020d00-84d5-11eb-82b0-6dfd4de1841a.png)
+
 ```C
 #include <stdio.h>
 #include <stdlib.h>
