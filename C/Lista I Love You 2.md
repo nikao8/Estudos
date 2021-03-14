@@ -167,3 +167,29 @@ void main()
     printf ("%i", mdc(n1,n2));
 }
 ```
+6. Faça um programa que leia os catetos (dois catetos) de um triângulo retângulo e imprima a hipotenusa. Para fazer o cálculo,
+
+implemente uma função. Utilize a fórmula a seguir. o menor valor e incrementada em uma unidade até que seja igual ao valor final.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float hipotenusa(float c1, float c2)
+{
+    float res=0;
+    res = sqrt(pow(c1,2)+pow(c2,2));
+    return printf("%.2f", res);
+}
+
+void main()
+{
+    float n1,n2;
+
+    printf ("Insira os dois catetos de um triangulo retângulo para descobrir a hipotenusa: \n");
+    scanf ("%f %f",&n1,&n2);
+
+    printf("\n\nO resultado eh: ");
+    hipotenusa(n1,n2);
+}
+```
