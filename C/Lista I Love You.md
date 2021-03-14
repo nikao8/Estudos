@@ -17,44 +17,47 @@ necessários 4 fluxos distintos na estrutura de decisão. Veja a seguir a
 resposta do exercício e os comentários.
 
 ```C
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
 
-int cargo; 
-float salario, reaj;
-system ("color 03");
-printf ("\nSelecione o seu cargo para o calculo do reajuste:\n\n 1- Auxiliar de escritorio \n 2- Secretario\n 3- Cozinheiro\n 4- Entregador\n");
-scanf ("%i", &cargo);
-printf ("Insira o seu salario atual: ");
-scanf ("%f", &salario);
+    int cargo; 
+    float salario, reaj;
+    system ("color 03");
+    printf ("\nSelecione o seu cargo para o calculo do reajuste:\n\n 1- Auxiliar de escritorio \n 2- Secretario\n 3- Cozinheiro\n 4- Entregador\n");
+    scanf ("%i", &cargo);
+    printf ("Insira o seu salario atual: ");
+    scanf ("%f", &salario);
 
-switch (cargo)
+    switch (cargo)
     {
-    case 1:
-    reaj = (salario * 0.07) + salario;
-    break;
+        case 1:
+        reaj = (salario * 0.07) + salario;
+        break;
 
-    case 2:
-    reaj = (salario * 0.09) + salario;   
-    break;
+        case 2:
+        reaj = (salario * 0.09) + salario;   
+        break;
 
-    case 3:
-    reaj = (salario * 0.05) + salario;
-    break;
+        case 3:
+        reaj = (salario * 0.05) + salario;
+        break;
 
-    case 4:
-    reaj = (salario * 0.12) + salario;
-    break;
+        case 4:
+        reaj = (salario * 0.12) + salario;
+        break;
 
-    default:
-    return (main);  
+        default:
+        return (main);
+        break;  
     }
 
-    system ("cls");
+    system ("cls || clear");
     printf ("O seu salario reajustado e: %.2f", reaj);
 
-
-return 0;
+    return 0;
 }
 ```
 
@@ -103,8 +106,6 @@ int main()
     {
         printf("Ola %s voce nao esta elegivel a doacao de sangue...", nome);
     }
-
-    
 
     return 0;
 }
