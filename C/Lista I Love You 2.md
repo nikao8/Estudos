@@ -371,7 +371,7 @@ int main()
     return 0;
 }
 ```
-11. Escreva um software que gerencie uma cadeia de estoques
+12. Escreva um software que gerencie uma cadeia de estoques
 de 5 produtos em 5 armazéns de uma empresa, conforme figura
 abaixo:
 
@@ -453,3 +453,114 @@ int main()
     return 0;
 }
 ```
+13. Escreva um programa que contenha duas variáveis inteiras. Compare
+seus endereços e exiba o maior endereço.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+
+    int n1, n2, maior=0, maior2=0;
+    int *x1, *x2;
+
+    printf ("Insira a seguir o conteudo das variaveis 1 e 2:\n");
+    scanf ("%i", &n1);
+    scanf ("%i", &n2);
+
+    x1 = &n1;
+    x2 = &n2;
+
+    printf ("\nConteudo dos ponteiros das variaveis:\n\nVariavel 1 -> %i\nVariavel 2 -> %i ", *x1,*x2);
+
+    if (*x1 > maior)
+    {
+        maior = *x1;
+    }
+    else
+    {
+        maior = *x2;
+    }
+
+    printf ("\n\nO maior conteudo das variaveis eh: %i", maior);
+
+    if (x1 > maior2)
+    {
+        maior2 = x1;
+    }
+    else
+    {
+        maior2 = x2;
+    }
+
+    printf ("\n\nEndereco das variaveis na memoria:\n\nVariavel 1 -> %i\nVariavel 2 -> %i", x1,x2);
+    
+    printf ("\n\nO maior endereco das variaveis eh: %i", maior2);
+}
+```
+14. Elabore um programa que leia um valor do tipo inteiro e, por meio
+de função, atualize todas as posições de um vetor com o número inteiro
+lido, depois imprima os valores. Utilize ponteiros para as operações.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+void func(int x,int *p,int vet[5])
+{
+    int i;
+
+    p = &x;
+    
+    for (i = 0;i < 5; i++)
+    {
+        vet[i] = *p;       
+        printf("Valor na pos %i = %i\n", i+1, vet[i]);
+    } 
+}
+void main()
+{
+    int x,vet[5], *p1;
+
+    printf ("Insira o numero a popular o vetor: (VETOR DE 5 POSICOES) ");
+    scanf ("%i", &x);
+    printf ("\nO conteudo do vetor selecionado eh:\n\n");
+    
+    func(x, *p1, vet);
+}
+```
+15. Faça um programa que receba dois valores inteiros, após receber
+esses dois valores, uma função deve calcular e retornar para o
+programa o resultado da soma e da subtração dos valores. Obs.:
+Apenas uma função deve realizar esta operação, desta forma, faça
+uso de ponteiros.
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int operacao(int x, int y, int *p, int *p1)
+{
+    int res,res1;
+
+    p = &x;
+    p1 = &y;
+
+    res = *p + *p1;
+    res1 = *p - *p1;
+
+    return printf("A soma dos numeros eh = %i\nA subtracao dos numeros eh = %i", res,res1);
+}
+void main()
+{
+    int x , y, *p, *p1;
+
+    printf ("Insira o primeiro numero para operacao: ");
+    scanf ("%i", &x);
+    printf ("\nInsira o segundo numero para operacao: ");
+    scanf ("%i", &y);
+
+    operacao(x, y, *p, *p1);
+}
+```
+
+
