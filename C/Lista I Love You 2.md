@@ -562,5 +562,3 @@ void main()
     operacao(x, y, *p, *p1);
 }
 ```
-
-testeeee victorasdasdasldjaljdhalsdjkalsjdalslkjd
