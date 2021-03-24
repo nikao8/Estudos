@@ -1,9 +1,83 @@
-*{
+*
+{
     font-family: 'Open Sans', sans-serif;
     color: white;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav
+{
+    background: #363636;
+    height: 80px;
+    width: 100%;
+    float: right;
+    margin-right: 20px;
+}
+nav a
+{
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a:hover
+{
+    background: #D3D3D3;
+    transition: .5s;
+}
+
+label.logo
+{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
 body
 {
     background-image:url(background.jpg),linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(background.jpg);
-    background-size: 100%
+    background-size: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#volta
+{
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    padding: 12px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px
+}
+#desce
+{
+    text-decoration: none;
+    color: white;
+    background-color: gray;
+    padding: 12px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px
+}
+strong
+{
+    line-height: 4em;
+    letter-spacing: 6px;
+}
+.end
+{
+    text-align: center;
+}
+.contact
+{
+    text-align: center;
 }
