@@ -1,0 +1,9 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+body
+{
+    background-image:url(background.jpg),linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(background.jpg);
+    background-size: 100%
+}
