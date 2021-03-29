@@ -1,0 +1,177 @@
+*
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#menuprin
+{
+    padding: auto;
+    list-style-type: none;
+    width: 710px;
+    margin: auto;
+    float: center;
+    position: relative; 
+}
+#menuprin li
+{
+    background: #FFF0F5;
+    float: left;
+    margin: auto;
+}
+#menuprin a
+{
+    width: 150px;
+    height: 20px;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1em;
+}
+.menu_item:visited
+{
+    color: #8B008B;
+}
+.menu_item:hover
+{
+    background-color:#FFFAFA;
+}
+.banner
+{
+    margin: auto;
+    float: center;
+    text-align: center;
+    margin-top: 8px;
+}
+.clearFloat
+{
+    clear: both;
+}
+.promos
+{
+    margin-left: 400px;
+    float: center;
+    display: inline;
+}
+.promos_item
+{
+    padding: 5px;
+}
+.clearFloat1
+{
+    clear: both;
+}
+.foto_galeria
+{
+    float: center;
+    margin-left: 890px;
+    margin-top: 100px;
+}
+#titulo1
+{
+    color:grey;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 3em;
+}
+#titulo2
+{
+    color: grey;
+    text-align: center;
+    /*margin-top: 100px;*/
+    font-size: 2.8em;
+}
+.clearFloat2
+{
+    clear: both;
+}
+#texto_anuncio
+{
+    text-align: center;
+    float: left;
+    font-size: 2.5em;
+    margin-left: 600px;
+    margin-top: 180px;
+    color: #A52A2A;
+}
+.foto_anuncio
+{
+    float: right;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 50px;
+    border: 1px solid #FFDEAD;
+}
+#barra_anuncio
+{
+    float: center;
+    margin-top: 500px;
+    margin-left: 550px;
+    position: absolute;
+}
+.clearFloat3
+{
+    clear: both;
+}
+.direita,.esquerda
+{
+    position: relative;
+    width: 40%;
+    padding: 20px;
+    border-top: 1px solid#A52A2A;
+    border-bottom: 1px solid #A52A2A;
+}
+#linhas
+{
+    font-size: 1.3em;
+    color: black;
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+}
+.direita
+{
+    left: 55%;
+}
+.esquerda
+{
+    left: 5%;
+}
+.clearFloat4
+{
+    clear: both;
+}
+.rodape
+{
+    background-color: #FFF0F5;
+    width: 2000px;
+    height: 100px;
+    margin-bottom: auto;
+    margin-top: 200px;       
+}
+#texto_rodape
+{
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 600px;
+    margin-bottom: 1px;
+    padding-right: 100px;
+    border-right: 2px solid #FFDEAD;
+}
+.img_rodape
+{
+    position: relative;    
+    padding-left: 40px;
+    float: right;   
+    margin-top: 25px;
+    margin-right: 500px;
+}
+#acesse
+{
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 1030px;
+    margin-top: 35px;
+}
