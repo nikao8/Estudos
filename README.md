@@ -15,8 +15,8 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
 
 - [HTML e CSS](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS)
   - [Exercícios Soltos](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/Exercicios%20Soltos)
-  - [Exercicio 01 Site SpartaFit](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/ExercicioAula02)
-  - [Exercício 02 Site Fotógrafo casamento](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/ExercicioAula08) 
+  - [Exercicio 01 Site SpartaFit](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/Exercicio01)
+  - [Exercício 02 Site Fotógrafo casamento](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/Exercicio02) 
   - [Exercício 03 Site GOV](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/Exercicio03)
 
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
