@@ -12,6 +12,7 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Lista I Love You 2](https://github.com/nikao8/Estudos/blob/main/C/Lista%20I%20Love%20You%202.md)
 
 - [Linguagem Python](https://github.com/nikao8/Estudos/tree/main/Python)
+  - [Exercícios Soltos](https://github.com/nikao8/Estudos/tree/main/Python/Exercicios%20Soltos) 
 
 - [HTML e CSS](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS)
   - [Exercícios Soltos](https://github.com/nikao8/Estudos/tree/main/HTML%20e%20CSS/Exercicios%20Soltos)
