@@ -27,7 +27,10 @@
 .banner
 {
     text-align: center;
-    background-color: gray;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 500px;
     margin-top: 15px;
 }
@@ -55,13 +58,18 @@ section
     margin-top: 30px;
     margin-bottom: 30px;
 }
+.imgbola:hover
+{
+    height: 320px;
+    width: 320px;
+}
 /*Imagens das bolas*/
 .imgbola
 {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: 1px solid rgb(78, 166, 248);
+    /*border: 1px solid rgb(78, 166, 248);*/
 }
 /*Parte das noticias*/
 .section_element
@@ -127,14 +135,19 @@ h1
     color: rgb(14, 53, 90);
 }
 /*Botoes do leia mais*/
-.leia_mais:hover
+.leia_mais:link
 {
-    color: rgb(178, 215, 252);
+    color: rgb(115, 168, 247);
 }
 .leia_mais:visited
 {
     color: purple;
 }
+.leia_mais:hover
+{
+    color: rgb(178, 215, 252);
+}
+
 footer
 {
     background-color: rgb(45, 54, 180);
