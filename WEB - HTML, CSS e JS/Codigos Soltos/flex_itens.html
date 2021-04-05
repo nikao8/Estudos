@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex itens</title>
+</head>
+
+<style>
+    /*CSS*/
+    .conteiner{
+        height: 80vh;
+        background-color: wheat;
+        /*flex*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .filho1 {
+        width: 230px;
+        height: 100px;
+        background-color: thistle;
+        align-self: center;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .filtro2 {
+        width: 230px;
+        height: 100px;
+        background-color: thistle;
+        align-self: center;
+        order: 2;
+        flex-grow: 1;
+    }
+
+    .filho3 {
+        width: 230px;
+        height: 100px;
+        background-color: thistle;
+        align-self: center;
+        order: 3;
+        flex-grow: 0;
+    }
+
+</style>
+
+<body>
+    
+    <div class="conteiner">
+        
+        <div class="filho1">Item 1</div>
+        <div class="filho2">Item 2</div>
+        <div class="filho3">Item 3</div>
+
+    </div>
+
+</body>
+
+</html>
