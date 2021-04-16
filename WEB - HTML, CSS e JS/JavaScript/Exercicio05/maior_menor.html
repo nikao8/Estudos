@@ -30,25 +30,34 @@
         let num1 = prompt("Insira o primeiro numero:")
         let num2 = prompt("Insira o segundo numero:")
         let num3 = prompt("Insira o terceiro numero:")
-        let num_maior = num1
-
-        document.write(`<h3>O primeiro numero digitado é: ${num1} </h3>`)
-        document.write(`<h3>O segundo numero digitado é: ${num2} </h3>`)
-        document.write(`<h3>O terceiro numero digitado é: ${num3} </h3>`)
-        
-        if (num2 > num1)
+ 
+        // calculo maior numero
+        if (parseInt(num1) >= parseInt(num2) && parseInt(num1) >= parseInt(num3))
         {
-            num_maior = num2
+          document.write(`<h3>O maior numero é: ${num1}</h3>`)     
         }
-
-        if(num3 > maior)
+        else if(parseInt(num2) >= parseInt(num3))
         {
-            num_maior = num3
+          document.write(`<h3>O maior numero é: ${num2}</h3>`)
+        }
+        else
+        {
+          document.write(`<h3>O maior numero é: ${num3}</h3>`)        
+        }
+        // calculo menor numero
+        if (num1 <= num2 && num1 <= num3)
+        {
+          document.write(`<h3>O menor numero é: ${num1}</h3>`)
+        }
+        else if(num2 <= num3)
+        {
+          document.write(`<h3>O menor numero é: ${num2}</h3>`)
+        }
+        else
+        {
+          document.write(`<h3>O menor numero é: ${num3}</h3>`)
         }
         
-        document.write("<br> <hr height=1 color=grey> <br>")
-        document.write(`<h3>O maior numero é: ${maior}`)
-
     </script>
 
   </body>
