@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linkar Bootstrap, CSS, JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <scrip src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></scrip>
+    -->
+    <title>Atividade 07</title>
+
+    <style>
+        .barra_div /*setando largura e altura das barras divisorias*/
+        {
+            width: 100%;
+            height: 1px;
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <p class="display-5 ms-3 mt-3">Atividade 07</p>
+    <hr class="barra_div" color=grey>
+
+    <script>
+
+        let escolha = prompt("Escolha uma função de a-j:")
+        escolha = escolha.toLowerCase() // Direcionando todos inputs para lower case para que o switch funcione corretamente
+
+        switch(escolha)
+        {
+			// ESPERE DE 5 A 10 SEGUNDOS PARA RENDERIZAR O RESULTADO, NO OPERA GX DEMOROU UM POUCO PARA RENDERIZAR A PAGINA!
+            case 'a':
+            
+                let raio = prompt("Insira o raio do circulo a ser calculado:")
+                let area_circulo = 3.14 * raio * raio
+
+				if (raio < 0 || raio == "")
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: valor inválido!</h3>`)
+				}
+				else
+				{
+                	document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">A área do circulo é: ${area_circulo} </h3>`)
+				}
+
+            break;
+
+			case 'b':
+
+				let altura = parseFloat(prompt("Insira a sua altura em metros:"))
+				let peso_ideal = 21.75 * altura * altura // formula do peso ideal pi=21.75*altura*altura
+
+				if(altura < 0) //validacao digito da altura
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: Altura não pode ser negativa!</h3>`)
+				}
+				else
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">O seu peso ideal é: ${peso_ideal} </h3>`)
+				}
+
+			break;
+
+			case 'c':
+				let numero_raiz = prompt("Insira um numero para o calculo da raiz quadrada")
+				// Função calculo da raiz quadrada 
+				function raizQuadrada(num)
+				{
+
+					let raiz = num ** 0.5
+
+				return raiz
+				}	
+
+                if (numero_raiz < 0 || numero_raiz == "")
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: valor inválido!</h3>`)
+				}
+				else
+				{
+					let resultado_sqrt = raizQuadrada(numero_raiz)
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">A raiz quadrada de ${numero_raiz} é: ${resultado_sqrt}</h3>`)
+				}
+
+			break;
+			
+			case 'd':
+
+				let base, potencia
+				let result = 1
+				let aux = 0
+
+				function Entrada()
+				{
+					// Pedindo valores do user
+					base = prompt("Insira a base:")
+					base = parseInt(base)
+					potencia = prompt("Insira a potencia:")
+					potencia = parseInt(potencia)
+
+					Validacoes() // chamando a funcao que vai validar os dados inseridos pelo user
+				}
+
+				function Validacoes()
+				{
+					// condicionais de validaçao da entrada de dados
+					if(base === undefined || potencia === undefined)
+					{
+						document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: valor indefinido!</h3>`)
+						aux = 1
+					}
+
+					if(base < 0)
+					{
+						document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: valor negativo</h3>`)
+						aux = 1
+					}
+
+					if(isNaN(base) || isNaN(potencia))
+					{
+						document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: digito invalido!</h3>`)
+						aux = 1
+					}
+
+				}
+
+				Entrada() // Chamando a entrada dos dados de base e expoente
+
+				for(let i = 0; i < potencia; i++) // laço for para o calculo da potencia
+				{
+					result *= base // resultado começando do 1 ---- resultado vai receber ele mesmo * a base ------- com o laço dando stop rodando ate o numero da potencia
+				}
+
+				if(aux == 0) // if para excluir a saida do resultado quando há algum digito invalido
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">Resultado: ${result}</h3>`) // print do resultado na tela
+				}
+			
+			break;
+
+			case 'e':
+				
+				let n1 = prompt("Insira o numero 1")
+				let n2 = prompt("Insira o numero 2")
+				let n3 = prompt("Insira o numero 3")
+				let n4 = prompt("Insira o numero 4")
+				let n5 = prompt("Insira o numero 5")
+				let mp = 0
+				                    
+				mp = ((n1*1)+(n2*2)+(n3*3)+(n4*4)+(n5*5))/15
+				
+
+				if (n1 == "" || n2 == "" || n3 == "" || n4 == "" || n5 == "" || n1 < 0 || n2 < 0 || n3 < 0 || n4 < 0 || n5 < 0) 
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: digito invalido!</h3>`)
+				}
+				else
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">A media ponderada é: ${mp}</h3>`)
+				}
+
+			break;
+
+			case 'f':
+
+				let temperatura = prompt("Insira a sua temperatura: Farenheight --> Celsius")
+				let resultado_temp = (temperatura - 32) * 5 / 9
+				
+				// Validaçao da entrada
+				if (temperatura == "")
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: digito invalido!</h3>`)
+                }
+                else 
+				{
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">A temperatura convertida é: ${resultado_temp}</h3>`)
+                }				
+
+			break;
+
+			case 'g':
+				
+				let horas_trabalhadas = prompt("Insira suas horas trabalhadas:")
+
+				let horas_trabalhadas_mes = prompt("Insira suas horas trabalhadas no mes:")
+
+				function Salario(salario,mes)
+				{
+					let bruto = salario * mes
+					let inss = bruto * 0.08
+					let liquido = bruto - inss
+
+					return liquido
+				}
+                // VALIDAÇAO
+				if (horas_trabalhadas < 0 || horas_trabalhadas == "" || horas_trabalhadas_mes < 0 || horas_trabalhadas_mes == "")
+				{
+                    document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: digito inválido!</h3>`)
+                }
+                else
+				{
+					let resultado_horas_trabalhadas = Salario(horas_trabalhadas,horas_trabalhadas_mes)
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">O salário liquido com desconto do inss e imposto de renda incluso é: ${resultado_horas_trabalhadas}</h3>`)
+                }
+
+			break;
+
+			case 'h':
+				// funcao da area do triangulo
+				let ladoTrig = prompt("Insira o lado do seu triangulo:")
+				
+				function Triangulo(lado)
+				{
+					let area = ((lado * lado)/4) * 1.7;
+					return area;
+				}
+
+				let resultado_Trig = Triangulo(ladoTrig)
+
+                if (ladoTrig < 0 || ladoTrig == "")
+				{
+
+                    document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: digito inválido!</h3>`)
+
+                }
+                else {
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">Area do triangulo é: ${resultado_Trig}</h3>`)
+                }
+				
+			break;
+
+			case 'i':
+
+				let Co = prompt("Insira o cateto oposto:")
+				let Sen = prompt("Insira o seno:")
+
+				function Hipotenusa(catO,seno)
+				{
+        			let hipotenusa = catO/seno;
+        			return hipotenusa;
+    			}
+
+				if (Co <= 0 || Co == "" || Sen <= 0 || Sen == "") {
+                    document.write(`<h3 class="h3 mt-3 ms-3 alert alert-danger">Erro: Digito inválido!</h3>`)
+                }
+                else {
+					let resultado_hipotenusa = Hipotenusa(Co,Sen)
+					document.write(`<h3 class="h3 mt-3 ms-3 alert alert-success">A hipotenusa é: ${resultado_hipotenusa}</h3>`)
+                }
+
+			break;
+
+			case 'j':
+				function fechar()
+				{
+					window.close()
+				}
+
+				let fechar_nav = fechar()
+
+				document.write(fechar_nav)
+			break;
+        }
+
+    </script>
+  </body>
+</html>
