@@ -22,6 +22,7 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Exercício 03 Site GOV](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio03)
   - [Exercício 04 Currículo](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio04)
   - [Exercício 05 Lista JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio05)
+  - [Exercício 06 Lista JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio06)
   
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
