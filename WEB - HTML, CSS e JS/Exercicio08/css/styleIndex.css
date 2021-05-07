@@ -1,0 +1,76 @@
+*
+{
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Mukta', sans-serif;
+}
+#container_menu /*Ajuste de cor e fonte navbar*/
+{
+    background-color: rgb(145, 53, 53);
+    font-size: 1.3em;
+}
+#Inamus_text_brand
+{
+    font-size: 1.4em;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	/*.navbar .nav-item:hover .nav-link{   }*/
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+body
+{
+    background: url(../img/background.jpg) no-repeat left center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#menu_item /* AJUSTE DE COR DAS OPÇOES DA NAVBAR */ 
+{
+    color: white;
+}
+#menu_item1
+{
+    color: white;
+}
+#menu_item2
+{
+    color: white;
+}
+#menu_item3
+{
+    color: white;
+}
+#menu_item:hover
+{
+    background-color: rgb(73, 7, 7);
+    border-radius: 5%;
+}
+#menu_item2:hover
+{
+    background-color: rgb(73, 7, 7);
+    border-radius: 5%;
+}
+#menu_item3:hover
+{
+    background-color: rgb(73, 7, 7);
+    border-radius: 5%;
+}
+#pizza1
+{
+    width: 600px;
+    border: solid 1px white;
+}
+footer /* RODAPÉ */
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#container_main /* AJUSTANDO CONTEUDO NO MEIO DA PAGINA */
+{
+    margin-top: 126px;
+}
+
