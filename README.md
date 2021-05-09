@@ -24,7 +24,8 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Exercício 06 Lista JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio06)
   - [Exercício 07 Desafio JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio07)
   - [Exercício 08 Site Inamus Pizza](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio08)
-  - [Ecercício 09 Calculadora JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio09)
+  - [Exercício 09 Calculadora JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio09)
+  - [Exercício 10 Troca Cor JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio10)
   
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
