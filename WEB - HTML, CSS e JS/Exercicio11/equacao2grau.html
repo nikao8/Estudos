@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linkar Bootstrap, CSS, JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <title>Cálculo equação de segundo grau</title>
+
+  </head>
+    <body>  
+
+    <div class="container">
+        <p class="display-5 text-center">Faça seu cálculo da equação de segundo grau:</p>
+        <hr>
+        <!--INPUTS-->
+        <div class="form-group p-3">
+            <label>Insira o valor de "a"</label>
+            <input class="form-control" id="inputA">
+        </div>
+        <div class="form-group p-3">
+            <label>Insira o valor de "b"</label>
+            <input class="form-control" id="inputB">
+        </div>
+        <div class="form-group p-3">
+            <label>Insira o valor de "c"</label>
+            <input class="form-control" id="inputC">
+        </div>
+        <button class="btn btn-dark mt-1 mb-3 ms-3" onclick="calculo2grau()">Enviar</button>
+        <p class="h4 bg-dark text-light p-2 ms-3 w-50">O resultado de x é: <spam class="h4 text-light" id="result">o resultado aparecerá aqui</spam></p>
+
+    </div>
+
+    <script>
+        function calculo2grau()
+        {
+            let a = Number(document.getElementById("inputA").value)
+            let b = Number(document.getElementById("inputB").value)
+            let c = Number(document.getElementById("inputC").value)
+            let delta = (b*b) - 4*a*c // calculo do delta
+            //let resultado = document.getElementById("result") 
+
+            if (a == "" || a == 0)
+            {
+                document.getElementById("result").innerHTML = "O dígito inserido para 'a' é inválido"
+            }
+            else if (delta == 0)
+            {
+                document.getElementById("result").innerHTML = "Os valores de x são iguais (Delta = 0)"
+            }
+            else if (delta < 0)
+            {
+                document.getElementById("result").innerHTML = "O delta não possui raízes reais (Delta < 0)"
+            }
+            else
+            {
+                let deltaRoot = Math.sqrt(delta)
+                let x1 = (b*(-1) + deltaRoot) / (2*a)
+                let x2 = (b*(-1) - deltaRoot) / (2*a)
+
+                document.getElementById("result").innerHTML = `x1 = ${x1} | x2 = ${x2}`
+            }
+        }
+    </script>
+
+  </body>
+</html>
