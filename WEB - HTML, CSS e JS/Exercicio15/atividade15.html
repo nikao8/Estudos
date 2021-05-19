@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linkar Bootstrap, CSS, JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <title>Atividade 15</title>
+
+  </head>
+  <body class="bg-dark">
+
+    <div class="container text-center mt-4 text-light">
+        <p class="h2 p-2">Escolha as opções entre a-i.</p>
+        <p class="h5 p-2">Opção a: encontrar o fatorial de um numero.</p>
+        <p class="h5 p-2">Opção b: verificar se um numero é primo.</p>
+        <p class="h5 p-2">Opção c: ordenar 3 numeros em ordem crescente.</p>
+        <p class="h5 p-2">Opção d: recebe uma lista de nomes e ordena em ordem crescente.</p>
+        <p class="h5 p-2">Opção e: recebe valores e imprime em formato índice e valor de um array.</p>
+        <p class="h5 p-2">Opção f: calcula uma média aritimetica de 4 notas.</p>
+        <p class="h5 p-2">Opção g: exibe informações do array numeros[0,17,2,4,6,23,50,32,80].</p>
+        <p class="h5 p-2">Opção h: recebe 10 anos e imprime os anos bissextos.</p>
+        <p class="h5 p-2">Opção i: imprime numeros primos entre 0 e 100.</p>
+        <hr>
+
+        <div class="form-group mt-3 text-start">
+            <div class="row">
+                <div class="col-3">
+                    <label>Escolha entre a-i:</label>
+                    <input class="form-control mt-2 w-100" id="input1" placeholder="Digite aqui">
+                </div>
+                <div class="col-9 bg-light">
+                    <p class="h4 mt-4 text-dark text-start" id="result">Resultado aparecerá aqui</p>
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary mt-3" style="width: 23%; margin-left: 11px;" onclick="main()">Enviar</button>
+            </div>
+            <hr>
+        </div>
+
+        <script>
+            function main()
+			{
+				let entrada = document.getElementById("input1").value.toLowerCase()
+				let saida = document.getElementById("result")
+				switch (entrada)
+				{
+					case 'a':
+						
+						let num = parseInt(prompt("Insira um numero para encontrar o seu fatorial:"))
+						let resultado = 1
+							
+							while (num > 0)
+							{
+		
+								resultado *= num
+								num--
+							
+							}
+					
+							saida.innerHTML = resultado
+
+					break;
+
+					case 'b':
+
+						let num1 = parseInt(prompt("Insira um numero para saber se ele é primo:"))
+						let aux = 0
+						
+						for (let i = 1; i <= num1; i++)
+						{
+							if(num1 % i == 0)
+							{
+								aux++	
+							}
+							if(aux == 2)
+							{
+								saida.innerHTML = 'O numero inserido é primo!'
+							}
+							else
+							{
+								saida.innerHTML = 'O numero inserido não é primo!'
+							}
+						}
+
+					break;
+
+					case 'c':
+						let n1 = parseInt(prompt("Insira o primeiro numero:"))
+						let n2 = parseInt(prompt("Insira o segundo numero:"))
+						let n3 = parseInt(prompt("Insira o terceiro numero:"))
+
+						let numerosOrd = Array(n1,n2,n3)
+
+						let resultado1 = numerosOrd.sort(function(a, b)
+						{
+							return a - b
+						})
+
+						saida.innerHTML = resultado1
+
+					break;
+				
+					case 'd':
+
+						let escolhaTam = prompt("Quantos nomes voce deseja inserir ?")
+
+						let listaNomes = [escolhaTam]
+
+						for (let i = 0; i < escolhaTam; i++)
+						{
+							listaNomes[i] = prompt(`Insira o ${i+1} nome:`).toLowerCase()
+						}
+					
+						let resultado2 = listaNomes.sort()
+
+						saida.innerHTML = resultado2
+					break;
+
+					case 'e':
+
+						let escolhaTamArrayNum = prompt("Quantos numeros voce deseja inserir no array ?")
+
+						let listaArrayNum = [escolhaTamArrayNum]
+
+						for (let i = 0; i < escolhaTamArrayNum; i++)
+						{
+							listaArrayNum[i] = prompt(`Insira o ${i+1} numero:`).toLowerCase()
+						}
+						saida.innerHTML = ""
+						for (let i = 0; i < escolhaTamArrayNum; i++)
+						{
+							saida.innerHTML += `Posição: ${i} | Valor: ${listaArrayNum[i]}<br>`
+						}
+
+					break;
+
+					case 'f':
+						
+						let notas = Array()
+						let media = 0
+						for(let i = 0; i < 4; i++)
+						{
+							notas[i] = prompt(`Insira a ${i+1} nota:`)
+							media += parseFloat(notas[i]) 
+						}
+						
+						let mediaFinal = media / 4
+						saida.innerHTML = `NOTA 1: ${notas[0]}<br>NOTA 2: ${notas[1]}<br>NOTA 3: ${notas[2]}<br>NOTA 4: ${notas[3]}<br><br>A média aritimética das suas notas é: ${mediaFinal}`
+						
+					break;
+
+					case 'g':
+
+						let numeros = Array(0,17,2,4,6,23,50,32,80)
+
+						// ENCONTRAR MAIOR NUMERO
+						let maiorNum = numeros.reduce(function(a, b) {
+							return Math.max(a, b);
+						})
+						
+						// NUMEROS PARES E IMPARES
+						let numerosPares = Array()
+						let numerosImpares = Array()
+						for(i = 0; i < 9; i++)
+						{
+							if(numeros[i] % 2 == 0)
+							{
+								numerosPares[i] = numeros[i]
+							}
+							else
+							{
+								numerosImpares[i] = numeros[i]
+							}
+						}
+
+						// NUMEROS MAIORES QUE 20
+
+						let numerosMaiores20 = Array()
+
+						for (let i = 0; i < 9; i++)
+						{
+							if (numeros[i] >= 20)
+							{
+								numerosMaiores20[i] = numeros[i]
+							}
+						}
+
+						// MAIOR E MENOR (Maior numero ja foi encontrado)
+
+						let menorNum = numeros.reduce(function(a, b) {
+							return Math.min(a, b);
+						})
+
+						// ARRAY EM ORDEM CRESCENTE
+						let numerosCrescente = Array()
+						numerosCrescente = numeros.sort(function(a, b)
+						{
+							return a - b
+						})
+
+						/*let numerosDecrescente = Array()
+						numerosDecrescente = numeros.sort(function(a, b)
+						{
+							return b - a
+						})*/
+						
+						//SAIDA FINAL
+
+						saida.innerHTML = `O maior número é: ${maiorNum}<br><br>Numeros pares: ${numerosPares}<br>Numeros impares: ${numerosImpares}<br><br>Numeros Maiores do que 20: ${numerosMaiores20}<br><br>
+						Maior numero: ${maiorNum} & Menor numero: ${menorNum}<br><br>Array em ordem crescente: ${numerosCrescente}<br><br>`
+
+					break;
+
+					case 'h':
+
+						let anos = [10]
+						let anosBissextos = Array()
+						
+
+						for (let i = 0; i < 10; i++)
+						{
+							anos[i] = prompt(`Insira o ${i+1} ano:`)
+							//saida.innerHTML = ""
+
+							if(anos[i] % 400 == 0)
+							{
+								anosBissextos[i] = anos[i]
+							}
+
+						}
+						
+						let auxiliar = anosBissextos.length // PEGA QUANTOS ITENS EXISTEM NO ARRAY
+						
+						if (auxiliar == 0) // SE AUXILIAR = 0, ENTAO NÃO A CONDIÇÃO IF QUE INSERE O ANO BISSEXTO NO ARRAY NAO FOI ATENDIDA, POIS NAO FOI INSERIDO NADA NO ARRAY
+						{
+							saida.innerHTML = `<p class="text-danger">Não foram encontrados anos bissextos.</p>`
+						}
+						else
+						{
+							saida.innerHTML = `Os anos bissextos encontrados: ${anosBissextos}`
+						}
+
+					break;
+
+					case 'i':
+					
+						let primos = Array()
+
+						for(let i = 2; i <= 100; i++)
+						{
+							let primoVerifica = true
+							
+							for (let divisor = 2; divisor < i; divisor++)
+							{
+								if (i % divisor == 0)
+								{
+									primoVerifica = false
+									break
+								}
+							}
+
+							if (primoVerifica == true)
+							{
+								primos += `${i}, `
+							}
+
+						}
+						//let primos2 = Array()
+						//primos2 = primos
+						saida.innerHTML = `Os numeros primos entre 0 e 100 são:<br>${primos}`
+
+					break;
+
+					default:
+						saida.innerHTML = `<p class="text-danger">Dígito inválido, escolha entre a-i</p>`
+					break;
+				}
+			}
+        </script>
+
+    </div>
+
+  </body>
+</html>
