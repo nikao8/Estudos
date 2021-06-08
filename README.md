@@ -35,7 +35,7 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
 - [Mobile](https://github.com/nikao8/Estudos/tree/main/Mobile)
   - [Dart](https://github.com/nikao8/Estudos/tree/main/Mobile/Dart)
     - [POO](https://github.com/nikao8/Estudos/tree/main/Mobile/Dart/POO)
-    - [Lista de exercícios1](https://github.com/nikao8/Estudos/tree/main/Mobile/Dart/Lista%20Exerc%C3%ADcios%2001)
+    - [Lista de Exercícios 1](https://github.com/nikao8/Estudos/tree/main/Mobile/Dart/Lista%20Exerc%C3%ADcios%2001)
  
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
