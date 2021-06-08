@@ -1,19 +1,22 @@
-class Carro {
+class Veiculo {
   // Atributos da classe:
   int velocidade;
   // Metodo construtor
-  Carro(this.velocidade);
+  Veiculo(this.velocidade);
 
   // Metodo:
-  Aceleracao() {
-    int velocidade = 0;
+  aceleracao() {
     while (velocidade < 100) {     
       print('Acelerando o carro - $velocidade km/h');
       velocidade += 10;
-      if (velocidade == 100) {
+    }
+  }
+  limite(){
+    if (velocidade == 100) {
         print('O carro atingiu a marca de 100 km/h');
       }
-    }
+  }
+  desaceleracao(){
     if (velocidade == 100) {
       while (velocidade != 0) {
         velocidade -= 10;

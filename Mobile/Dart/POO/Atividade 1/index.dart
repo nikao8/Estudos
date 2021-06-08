@@ -1,6 +1,8 @@
 import 'classes.dart';
 
 void main() {
-  Carro car = new Carro(0);
-  car.Aceleracao();
+  Veiculo camaro = new Veiculo(0);
+  camaro.aceleracao();
+  camaro.limite();
+  camaro.desaceleracao();
 }
