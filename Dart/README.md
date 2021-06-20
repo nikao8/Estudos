@@ -1,1 +1,1 @@
-# Pasta para códigos na linguagem Dart
+# Diretório para códigos na linguagem Dart
