@@ -6,5 +6,5 @@ void main() {
   print('Agora insira a velocidade de download em Mbps:');
   double velocidade = double.parse(stdin.readLineSync()!);
   double minutos = (tamanho / velocidade) / 60;
-  print('Voce precisara de ${minutos.toStringAsPrecision(3)} minutos aproximadamente');
+  print('Voce precisara de ${minutos.ceil()} minutos aproximadamente');
 }

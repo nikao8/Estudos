@@ -12,5 +12,5 @@ void main() {
   print('O desconto do Imposto de renda é de: ${salBruto * 0.11}');
   print('O desconto do INSS é: ${salBruto * 0.08}');
   print('O Sindicato é: ${salBruto * 0.05}');
-  print('O seu salario líquido é: ${salBruto - (salBruto - ((salBruto * 0.11) + (salBruto * 0.08) + (salBruto * 0.08)))}');
+  print('O seu salario líquido é: ${salBruto - ((salBruto * 0.11) + (salBruto * 0.08) + (salBruto * 0.05))}');
 }
