@@ -32,10 +32,11 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Exercício 14 Tabuada JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio14)
   - [Exercício 15 Desafio JS](https://github.com/nikao8/Estudos/tree/main/WEB%20-%20HTML%2C%20CSS%20e%20JS/Exercicio15)
  
-
 - [Dart](https://github.com/nikao8/Estudos/tree/main/Dart)
   - [POO](https://github.com/nikao8/Estudos/tree/main/Dart/POO)
   - [Lista de Exercícios 1](https://github.com/nikao8/Estudos/tree/main/Dart/Lista%20Exerc%C3%ADcios%2001)
+
+- [Flutter Projects](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects)
  
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
