@@ -1,1 +1,1 @@
-# Pasta direcionada a algoritimos na linguagem Python
+# Diretório direcionado a codigos na linguagem Python
