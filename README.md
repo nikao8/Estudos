@@ -38,6 +38,7 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Lista de Exercícios 1](https://github.com/nikao8/Estudos/tree/main/Dart/Lista%20Exerc%C3%ADcios%2001)
 
 - [Flutter Projects](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects)
+  - [WidgetsAula](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/ProjetoAula)
 
 - [CSharp Curso Alura](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura)
   - [CSharp parte 1](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura/CSharp%20parte%201)  
