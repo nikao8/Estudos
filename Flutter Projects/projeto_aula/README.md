@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Flutter Projects/projeto_aula/README.md
 # projeto_aula
+=======
+# ProjetoAula
+>>>>>>> bcf0300168ba45d55f79e2ed7cf75e3b3fca8d7e:Flutter Projects/ProjetoAula/README.md
 
 A new Flutter project.
 
