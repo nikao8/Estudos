@@ -1,4 +1,4 @@
-name: projeto_aula
+name: atividade_6
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -27,11 +27,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.3
-  get: ^4.3.8
-
-  # Dependencia http
-  http: ^0.13.3
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -52,17 +48,18 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-  
   assets:
-    - images/forest.jpg
-    - images/menina_icon.png
-    - images/menina.png
-    - images/menino1_icon.png
-    - images/menino1.png
-    - images/menino2_icon.png
-    - images/menino2.png
-    - images/none_icon.png
-  
+    - images/corrida.png
+    - images/ginastica.png
+    - images/natacao.png
+    - images/tenis.png
+    - images/olimpiadas_vetorizada.png
+    - images/piscina.png
+    - images/maratona.png
+    - images/estadio_ginastica.jpeg
+    - images/tenis_masculino.png
+    - images/tenis_feminino.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

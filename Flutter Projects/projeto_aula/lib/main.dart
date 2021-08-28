@@ -1,121 +1,91 @@
+// REQUISIÇÃO DE API'S
 import 'package:flutter/material.dart';
 
+// Toda vez q utilizar dependencias do flutter utilizar no terminal:
+// dart pub upgrade --null-safety
+// dart migrate
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
 main() => runApp(MaterialApp(
-      home: Gesture(),
+      home: Home(),
+      debugShowCheckedModeBanner: false,
     ));
 
-class Gesture extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _GestureState createState() => _GestureState();
+  _HomeState createState() => _HomeState();
 }
 
-class _GestureState extends State<Gesture> {
-  String _personagem = '';
-  var _image = AssetImage('images/none_icon.png');
+class _HomeState extends State<Home> {
+  // Controller
+  TextEditingController _textEditingControllerCep = TextEditingController();
 
-  personagemEscolhido(String personagem) {
-    if (personagem == 'menino1') {
-      _personagem = 'Você escolheu o João!';
-      _image = AssetImage('images/menino1_icon.png');
-    } else if (personagem == 'menina') {
-      _personagem = 'Você escolheu a Maria!';
-      _image = AssetImage('images/menina_icon.png');
-    } else {
-      _personagem = 'Você escolheu o José';
-      _image = AssetImage('images/menino2_icon.png');
-    }
+  // Criando variaveis
+  String _logradouro = '';
+  String _complemento = '';
+  String _bairro = '';
+  String _localidade = '';
+  String _uf = '';
+
+  _buscaCep() async {
+    int? cep = int.tryParse(_textEditingControllerCep.text);
+    final String authority = 'viacep.com.br';
+    final String path = 'ws/$cep/json/';
+
+    var response = await http.get(Uri.https(authority, path));
+
+    // Decodificando e passando para um Map
+    // Chave = String && valor = dynamic
+    Map<String, dynamic> objetoJson = json.decode(response.body);
+
+    setState(() {
+      _logradouro = objetoJson['logradouro'];
+      _complemento = objetoJson['complemento'];
+      _bairro = objetoJson['bairro'];
+      _localidade = objetoJson['localidade'];
+      _uf = objetoJson['uf'];
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gesture App'),
-        backgroundColor: Colors.amber,
+        title: Text('Consumo de Recursos: API CEP'),
+        backgroundColor: Colors.black,
       ),
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.all(20),
-
-        // Primeira uma coluna
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Agora a linha
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                // Detecção de toque na tela
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      personagemEscolhido('menino1');
-                    });
-                  },
-                  child: Image.asset(
-                    'images/menino1.png',
-                    width: 100,
-                  ),
-                ),
-
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      personagemEscolhido('menina');
-                    });
-                  },
-                  child: Image.asset(
-                    'images/menina.png',
-                    width: 100,
-                  ),
-                ),
-
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      personagemEscolhido('menino2');
-                    });
-                  },
-                  child: Image.asset(
-                    'images/menino2.png',
-                    width: 100,
-                  ),
-                ),
-              ],
+            TextField(
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                labelText: 'Entre com o CEP:',
+              ),
+              style: TextStyle(
+                fontSize: 18,
+              ),
+              controller: _textEditingControllerCep,
+            ),
+            ElevatedButton(
+              onPressed: _buscaCep,
+              child: Text('Buscar CEP'),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: const EdgeInsets.only(top:15),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Escolha um personagem:',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: 20,
-                      bottom: 20,
-                    ),
-                    child: Column(
-                      children: [
-                        Image(
-                          image: _image,
-                          width: 100,
-                        ),
-                      ],
-                    ),
-                  ),
+                  Text('Endereço: $_logradouro'),
+                  Text('Complemento: $_complemento'),
+                  Text('Bairro: $_bairro'),
+                  Text('Localidade: $_localidade'),
+                  Text('UF: $_uf'),
                 ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                top: 20,
-              ),
-              child: Text(
-                _personagem,
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.amber,
-                ),
               ),
             ),
           ],
