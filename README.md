@@ -43,6 +43,8 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Atividade 1: Cálculo Peso Ideal](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_2)
   - [Atividade 2: App Sorteio Mega Sena](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_3)
   - [Atividade 2: App Jokenpo](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_4)
+  - [Atividade 3: App Disney](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_5)
+  - [Atividade 3: App Olimpíadas](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_6)
 
 - [CSharp Curso Alura](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura)
   - [CSharp parte 1](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura/CSharp%20parte%201)  
