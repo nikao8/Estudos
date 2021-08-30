@@ -46,8 +46,9 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [Atividade 3: App Disney](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_5)
   - [Atividade 3: App Olimpíadas](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_6)
 
-- [CSharp Curso Alura](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura)
-  - [CSharp parte 1](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura/CSharp%20parte%201)  
+- [C# Curso Alura](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura)
+  - [C# parte 1](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura/CSharp%20parte%201)  
+  - [C# parte 2 POO](https://github.com/nikao8/Estudos/tree/main/CSharp%20Alura/CSharp%20parte%202%20POO)
  
 - [Engenharia de Software](https://github.com/nikao8/Estudos/tree/main/Engenharia%20de%20Softwares)
   - [Lista de exercícios Engenharia de Software 26/02](https://github.com/nikao8/Estudos/blob/main/Engenharia%20de%20Softwares/Lista%20eng-soft.md)
