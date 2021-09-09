@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
 
 class ListaNome extends StatefulWidget {
   // Atributo com construtor
-  String? nome;
+  final String? nome;
   ListaNome({this.nome});
   @override
   _ListaNomeState createState() => _ListaNomeState();
