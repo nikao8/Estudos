@@ -39,6 +39,7 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
 
 - [Flutter Projects](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects)
   - [WidgetsAula](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/projeto_aula)
+  - [WidgetsAula - App Agenda](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/projeto_aula2)
   - [Atividade 1: Cálculo Média Aritimética](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_1)
   - [Atividade 1: Cálculo Peso Ideal](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_2)
   - [Atividade 2: App Sorteio Mega Sena](https://github.com/nikao8/Estudos/tree/main/Flutter%20Projects/atividade_3)
