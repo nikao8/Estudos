@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
 // ------------------------------- TELA SERVIÇOS -------------------------------
 
 class Servicos extends StatefulWidget {
- final String? nome, endereco, contato;
+  final String? nome, endereco, contato;
 
   // Criando Construtor
   Servicos({this.nome, this.endereco, this.contato});

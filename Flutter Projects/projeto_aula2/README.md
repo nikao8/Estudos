@@ -1,7 +1,8 @@
-# Projeto da aula Senac 
-## Renomear arquivo para 'main.dart' quando for usar um determinado app!.
+# projeto_aula2
 
-### Getting Started
+A new Flutter project.
+
+## Getting Started
 
 This project is a starting point for a Flutter application.
 
