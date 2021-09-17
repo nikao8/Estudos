@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv('token.env')
 
 client = discord.Client()
+
 #----------------- Data e hora ----------------------
 day = date.today()
 d1 = day.strftime('%Y/%m/%d')
@@ -34,7 +35,7 @@ print('Horario: ', horario_agora1)
 @client.event
 async def on_ready():
   game = discord.Game("github.com/nikao8")
-  await client.change_presence(status=None, activity=game)
+  await client.change_presence(status=discord.Status.online, activity=game)
   print('Logado como {0.user}'.format(client))
   #await send_video()
 
@@ -71,12 +72,13 @@ async def send_video():
       channel_id = []
       for guild in client.guilds:
         for channel in guild.text_channels:
-          channel_id = channel.id
-          await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
-          time.sleep(1) # Tentando evitar mensagem duplicada do bot
-          break # se tirar esse break, ele manda em todos os canais de texto
-
-#sdc_token = os.getenv("TOKEN")
+          if channel.permissions_for(client):
+            channel_id = channel.id
+            await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
+            time.sleep(1) # Tentando evitar mensagem duplicada do bot
+            break # se tirar esse break, ele manda em todos os canais de texto
+          else:
+            continue
 
 client.run(os.getenv("TOKEN"))
              
