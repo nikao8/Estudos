@@ -72,13 +72,10 @@ async def send_video():
       channel_id = []
       for guild in client.guilds:
         for channel in guild.text_channels:
-          if channel.permissions_for(client):
-            channel_id = channel.id
-            await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
-            time.sleep(1) # Tentando evitar mensagem duplicada do bot
-            break # se tirar esse break, ele manda em todos os canais de texto
-          else:
-            continue
+          channel_id = channel.id
+          await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
+          #time.sleep(1) # Tentando evitar mensagem duplicada do bot
+          break # se tirar esse break, ele manda em todos os canais de texto
 
 client.run(os.getenv("TOKEN"))
              
