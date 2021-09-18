@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 load_dotenv('token.env')
 
 client = discord.Client()
-
 #----------------- Data e hora ----------------------
 day = date.today()
 d1 = day.strftime('%Y/%m/%d')
@@ -47,10 +46,7 @@ async def on_message(message): # Chama a function quando uma mensagem é enviada
 
 @client.event
 async def send_video():
-  
-  infinity_loop = 1
-
-  while (infinity_loop == 1):
+  while true:
     day = date.today()
     d1 = day.strftime('%Y/%m/%d')
 
@@ -74,9 +70,10 @@ async def send_video():
         for channel in guild.text_channels:
           channel_id = channel.id
           await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
-          #time.sleep(1) # Tentando evitar mensagem duplicada do bot
-          break # se tirar esse break, ele manda em todos os canais de texto
+          #time.sleep(1)
+          break # Sem o break, ele manda em todos os canais de texto
 
 client.run(os.getenv("TOKEN"))
              
 # BOT INVITE LINK: https://discord.com/api/oauth2/authorize?client_id=865350229318828113&permissions=8&scope=bot
+
