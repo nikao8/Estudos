@@ -46,7 +46,7 @@ async def on_message(message): # Chama a function quando uma mensagem é enviada
 
 @client.event
 async def send_video():
-  while true:
+  while True:
     day = date.today()
     d1 = day.strftime('%Y/%m/%d')
 
