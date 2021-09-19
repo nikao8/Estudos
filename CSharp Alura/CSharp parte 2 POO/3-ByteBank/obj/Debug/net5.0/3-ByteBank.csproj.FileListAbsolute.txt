@@ -1,0 +1,16 @@
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.exe
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.deps.json
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.runtimeconfig.json
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.runtimeconfig.dev.json
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.dll
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\ref\3-ByteBank.dll
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\bin\Debug\net5.0\3-ByteBank.pdb
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.csproj.AssemblyReference.cache
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.AssemblyInfoInputs.cache
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.AssemblyInfo.cs
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.dll
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\ref\3-ByteBank.dll
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.pdb
+C:\Users\nicol\source\repos\CSharp Alura\3-ByteBank\obj\Debug\net5.0\3-ByteBank.genruntimeconfig.cache
