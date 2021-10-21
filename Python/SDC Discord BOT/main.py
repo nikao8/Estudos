@@ -64,16 +64,15 @@ async def send_video():
     horario = time.localtime()
     horario_agora = time.strftime("%H:%M:%S", horario) 
 
-    if(horario_agora >= '17:00:00' and horario_agora <= '17:00:05' and diaStr == 'Friday'):
+    if(horario_agora >= '17:00:00' and horario_agora <= '17:00:03' and diaStr == 'Friday'):
       channel_id = []
       for guild in client.guilds:
         for channel in guild.text_channels:
           channel_id = channel.id
           await client.get_channel(channel_id).send('https://cdn.discordapp.com/attachments/767871106035875880/865399647682166864/sexta_dos_crias_nessa_porra_caralho_tavam_com_saudades_-_-.mp4')
           #time.sleep(1)
-          break # Sem o break, ele manda em todos os canais de texto
+          break # Sem o break o video é enviado em todos os canais de texto.
 
 client.run(os.getenv("TOKEN"))
-             
+           
 # BOT INVITE LINK: https://discord.com/api/oauth2/authorize?client_id=865350229318828113&permissions=8&scope=bot
-
