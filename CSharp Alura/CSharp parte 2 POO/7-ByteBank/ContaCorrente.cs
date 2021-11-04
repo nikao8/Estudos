@@ -23,6 +23,8 @@
         //simplificação:
         public Cliente Titular { get; set; }
 
+        public static int TotalDeContasCriadas { get; private set; }
+
         private int _agencia;
         public int Agencia {
             get
@@ -62,6 +64,8 @@
         {
             Agencia = agencia;
             Numero = numero;
+
+            ContaCorrente.TotalDeContasCriadas++;
         }
 
         public bool Sacar(double valor)
