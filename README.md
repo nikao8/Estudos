@@ -56,3 +56,5 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
 
 - [Cyber Security](https://github.com/nikao8/Estudos/tree/main/InfoSec)
   - [Repositório compartilhado InfoSec](https://github.com/3rdglaz/study/tree/main/InfoSec)
+
+- [Formação JavaScript Backend Alura](https://github.com/nikao8/Estudos/tree/main/JavaScript%20Alura)
