@@ -23,6 +23,6 @@ ClientePoupanca.prototype.depositarPoup = function(valor){
     this.saldoPoup += valor 
 }
 
-ju.depositarPoup(22)
+nico.depositarPoup(22)
 
-console.log(ju)
+console.log(nico)
