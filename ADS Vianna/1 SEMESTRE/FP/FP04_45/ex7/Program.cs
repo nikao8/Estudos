@@ -8,6 +8,7 @@ namespace ex7
         {
             int idade;
             Console.Write("Insira sua idade: ");
+            idade = Int32.Parse(Console.ReadLine());
 
             if(idade < 13)
             {
