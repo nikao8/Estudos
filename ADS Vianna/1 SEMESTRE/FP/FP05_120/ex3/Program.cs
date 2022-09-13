@@ -35,6 +35,7 @@ namespace ex3
         {
             for(int i = 2; i < num; i++)
             {
+                // var i iniciada com 2 pois quando o valor i = 1 entrasse na condicional if ele iria retornar false
                 if(num % i == 0)
                 {
                     return false;
