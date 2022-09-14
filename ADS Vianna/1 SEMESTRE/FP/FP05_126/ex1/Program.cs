@@ -6,7 +6,7 @@ namespace ex1
     {
         static void Main(string[] args)
         {
-            int num; int i=1;
+            int num; double i=1;
             double e = 0;
             
             Console.WriteLine("Insira o valor de um numero inteiro e positivo: ");
