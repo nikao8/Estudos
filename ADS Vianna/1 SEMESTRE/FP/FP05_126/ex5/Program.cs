@@ -10,11 +10,11 @@ namespace ex5
             Console.Write("Insira um numero inteiro e positivo: ");
             num = Int32.Parse(Console.ReadLine());
             
-            double e = 0;
+            double e = 1;
             
-            for(int i = 0; i < num; i++)
+            for(int i = 1; i < num; i++)
             {
-                e = e + (1/CalculaFatorial(i));
+                e = e + (1.0/CalculaFatorial(i));
             }
 
             Console.WriteLine("E = {0}", e);
