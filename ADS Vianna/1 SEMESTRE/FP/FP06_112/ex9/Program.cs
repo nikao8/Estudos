@@ -29,9 +29,10 @@ namespace ex9
 
             for(int i = 0; i < tamVet; i++)
             {
+                Console.WriteLine("\n[APOSTADOR {0}:]", i+1);
                 for (int j = 0;j < r.Length; j++)
                 {
-                    Console.Write("[APOSTADOR {0}] Aposta {1} de {2}: ", i+1, j+1, r.Length);
+                    Console.Write("Aposta {1} de {2}: ", i+1, j+1, r.Length);
                     r[j] = Int32.Parse(Console.ReadLine());
 
                     if(r[j] < 0 || r[j] > 2)
