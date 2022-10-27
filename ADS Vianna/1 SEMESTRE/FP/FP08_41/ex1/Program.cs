@@ -21,6 +21,7 @@ namespace ex1
         {
             for(int i = 0; i < linhasColunas; i++)
             {
+                Console.WriteLine("\nLinha {0}:\n", i+1);
                 for(int j = 0; j < linhasColunas; j++)
                 {
                     Console.Write("Valor {0}: ", j+1);
