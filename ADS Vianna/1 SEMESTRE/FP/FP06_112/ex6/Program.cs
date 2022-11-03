@@ -52,6 +52,31 @@ namespace ex6
             }
 
             return aprovados;
+
+
+
+
+
+
+
+
+
+
+
+
+
+            for(int i = 0; i < vetor.Length; i++)
+            {
+                Console.Write(vetor[i] + ",");
+
+                if(i == vetor.Length - 1)
+                {
+                    Console.Write(vetor[i]);
+                    break;
+                }
+            }
         }
     }
 }
+
+
