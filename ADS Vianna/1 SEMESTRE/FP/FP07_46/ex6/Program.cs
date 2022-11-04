@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace exfp
+namespace ex6
 {
     internal class Program
     {
