@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ex3
 {
@@ -36,12 +36,15 @@ namespace ex3
         {
             int caracteres = 0;
 
+            txt = txt.ToUpper();
+
             for(int i = 0; i < txt.Length; i++)
             {
-                if(txt[i] < 65 && txt[i] > 90)
+                if(txt[i] < 65 || txt[i] > 90)
                 {
                     caracteres++;
                 }
+
             }
 
             return caracteres;
