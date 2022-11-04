@@ -21,6 +21,8 @@ namespace ex3
         {
             int vogais = 0;
 
+            txt = txt.ToLower();
+
             for(int i = 0; i < txt.Length; i++)
             {
                 if(txt[i] == 'a' || txt[i] == 'e' || txt[i] == 'i' || txt[i] == 'o' || txt[i] == 'u')
