@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ex2
 {
@@ -14,27 +15,26 @@ namespace ex2
 
         static string Consoantes(string txt)
         {
-            string consoantes = "";
+            //string consoantes = "";
+            StringBuilder consoantes = new StringBuilder("", 50);
+            char aux; int x = 0;
             for(int i = 0; i < txt.Length; i++)
             {
-                if(CharLower(txt[i]) != 'a' && CharLower(txt[i]) != 'e' && CharLower(txt[i]) != 'i' && CharLower(txt[i]) != 'o' && CharLower(txt[i]) != 'u')
+                aux = CharLower(txt[i]);
+                if(aux != 'a' && aux != 'e' && aux != 'i' && aux != 'o' && aux != 'u')
                 {
-                    consoantes += txt[i];
+                    consoantes.Insert(x,txt[i]); /* Com o metodo insert é necessário passar o indice do string para inserir o caractere passado no outro parametro,
+                    nesse caso como o indice i vai variar por conta do if foi criado um novo contador que incrementa dentro da condicional */
+                    //consoantes.Append(txt[i]); // Metodo apend funciona neste caso pois a string inicial foi declarada como vazia
+                    x++;
                 }
+                
             }
 
-            return consoantes;
+            return consoantes.ToString();
         }
 
-        static char CharUpper(char c)
-        {
-            if(c >= 97 && c <= 122)
-            {
-                return Convert.ToChar(c - 32);
-            }
-            return c;
-        }
-
+        // Função criada para passar os caracteres para minusculo
         static char CharLower(char c)
         {
             if(c >= 65 && c <= 90)
@@ -43,5 +43,6 @@ namespace ex2
             }
             return c;
         }
+        
     }
 }
