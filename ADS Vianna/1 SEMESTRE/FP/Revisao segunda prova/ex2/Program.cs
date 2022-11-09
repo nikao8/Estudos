@@ -16,7 +16,7 @@ namespace ex2
         static string Consoantes(string txt)
         {
             //string consoantes = "";
-            StringBuilder consoantes = new StringBuilder("", 50);
+            StringBuilder consoantes = new StringBuilder("");
             char aux; int x = 0;
             for(int i = 0; i < txt.Length; i++)
             {
@@ -25,10 +25,10 @@ namespace ex2
                 {
                     consoantes.Insert(x,txt[i]); /* Com o metodo insert é necessário passar o indice do string para inserir o caractere passado no outro parametro,
                     nesse caso como o indice i vai variar por conta do if foi criado um novo contador que incrementa dentro da condicional */
+
                     //consoantes.Append(txt[i]); // Metodo apend funciona neste caso pois a string inicial foi declarada como vazia
                     x++;
                 }
-                
             }
 
             return consoantes.ToString();
