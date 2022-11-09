@@ -17,13 +17,31 @@ namespace ex2
             string consoantes = "";
             for(int i = 0; i < txt.Length; i++)
             {
-                if(txt[i] != 'a' && txt[i] != 'e' && txt[i] != 'i' && txt[i] != 'o' && txt[i] != 'u')
+                if(CharLower(txt[i]) != 'a' && CharLower(txt[i]) != 'e' && CharLower(txt[i]) != 'i' && CharLower(txt[i]) != 'o' && CharLower(txt[i]) != 'u')
                 {
                     consoantes += txt[i];
                 }
             }
 
             return consoantes;
+        }
+
+        static char CharUpper(char c)
+        {
+            if(c >= 97 && c <= 122)
+            {
+                return Convert.ToChar(c - 32);
+            }
+            return c;
+        }
+
+        static char CharLower(char c)
+        {
+            if(c >= 65 && c <= 90)
+            {
+                return Convert.ToChar(c + 32);
+            }
+            return c;
         }
     }
 }
