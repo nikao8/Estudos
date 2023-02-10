@@ -63,4 +63,5 @@ Repositório direcionado a exercícios de programação, hardware, redes, cyber 
   - [1-Fundamentos](https://github.com/nikao8/Estudos/tree/main/JavaScript%20Alura/1-Fundamentos)
 
 - [Análise e Desenvolvimento de Sistemas - ViannaJr](https://github.com/nikao8/Estudos/tree/main/ADS%20Vianna)
-  - [1 Semestre](https://github.com/nikao8/Estudos/tree/main/ADS%20Vianna/1%20SEMESTRE)
+  - [1 Semestre](https://github.com/nikao8/Estudos/tree/main/ADS%20Vianna/1%20PERIODO)
+  - [2 Semestre](https://github.com/nikao8/Estudos/tree/main/ADS%20Vianna/2%20PERIODO)
