@@ -34,6 +34,32 @@ texto = "It's study time";
 //- Verifique o tipo da variável que contém o seu nome
 console.log(typeof(nome));
 
+// Functions 
+function Somar(a,b)
+{
+    return a + b;
+}
 
+function Subtracao(a,b)
+{
+    return a - b;
+}
+
+function Multiplicacao(a,b)
+{
+    return a * b;
+}
+
+function Divisao(a,b)
+{
+    return a / b;
+}
+
+function Operacao(funcao,a,b)
+{
+    var result = funcao(a,b);
+    console.log(result);
+}
+//////////////////////////////////////////
 
 
