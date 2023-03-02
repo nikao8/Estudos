@@ -12,7 +12,7 @@ public class Funcionario {
         this.qtdFilhos = qtdFilhos;
     }
 
-    public double CalculaSalarioBruto(double salarioBruto, boolean valeTransporte, boolean trabalhadorNoturno, int qtdFilhos)
+    public double CalculaSalarioBruto(/*double salarioBruto, boolean valeTransporte, boolean trabalhadorNoturno, int qtdFilhos*/)
     {
         double salarioFinal = salarioBruto - (salarioBruto * 0.13);
 
