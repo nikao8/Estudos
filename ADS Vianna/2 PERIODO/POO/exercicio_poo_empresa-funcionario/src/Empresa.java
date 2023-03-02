@@ -9,10 +9,13 @@ public class Empresa {
     {
         return valorPagamentoFuncionarios;
     }
+    /*
     public void setValorPagamentoFuncionarios(double valorPagamentoFuncionarios)
     {
         this.valorPagamentoFuncionarios = valorPagamentoFuncionarios;
     }
+
+    */
     public double RetornaSalarioFuncionarios(double[] salarios)
     {
         double valorTotal = 0;
@@ -20,6 +23,7 @@ public class Empresa {
         {
             valorTotal += salarios[i];
         }
+        valorPagamentoFuncionarios = valorTotal;
         return valorTotal;
     }
 

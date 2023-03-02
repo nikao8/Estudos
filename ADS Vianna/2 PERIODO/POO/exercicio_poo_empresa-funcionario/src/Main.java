@@ -25,7 +25,7 @@ public class Main {
 
         double[] sals = {func1.CalculaSalarioBruto(),func2.CalculaSalarioBruto(),func3.CalculaSalarioBruto()};
 
-        gustil.setValorPagamentoFuncionarios(gustil.RetornaSalarioFuncionarios(sals));
+        //gustil.setValorPagamentoFuncionarios(gustil.RetornaSalarioFuncionarios(sals));
 
         System.out.println("Gasto da empresa com os salarios:" + gustil.RetornaSalarioFuncionarios(sals));
     }
