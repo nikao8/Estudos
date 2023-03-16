@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace Aula03
 {
-    
     public abstract class Funcionario // classe abstrata nao pode ser instanciada
     {
         private string _nome = "";        
