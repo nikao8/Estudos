@@ -22,17 +22,12 @@ internal class Program
 
         var totalFolhaPagto = 0.0;
 
-        foreach(var func in funcionarios)
-        {
-            totalFolhaPagto += funcionarios[i].GetSalario();
-        }
-
-        /*
+        
         for(int i = 0; i < funcionarios.Length; i++)
         {
             totalFolhaPagto += funcionarios[i].GetSalario();
         }
-        */
+        
 
         Console.WriteLine($"Total da folha de pagamento: {totalFolhaPagto:C2}");
     }
