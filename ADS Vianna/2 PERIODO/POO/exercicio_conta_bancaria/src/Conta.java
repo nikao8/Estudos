@@ -3,7 +3,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Conta {
     private int numero; // não é criado um set, pois o numero é gerado randomicamente 1x na abertura da conta
     private String dono;
-    private double saldo;
+    protected double saldo; //protected é public para a propria classe e as classes filhas apenas
+    private Banco banco;
 
     public Conta()
     {
@@ -36,20 +37,16 @@ public class Conta {
 
     public void depositar(double valorDeposito)
     {
-        saldo += valorDeposito;
+        if(valorDeposito > 0) {
+            saldo += valorDeposito;
+        }
     }
 
-    public boolean sacar(double valorSaque)
+    public void sacar(double valorSaque)
     {
-        if(valorSaque > saldo)
-        {
-            return false;
-        }
-        else
+        if(valorSaque > 0 && valorSaque <= saldo)
         {
             saldo -= valorSaque;
-            return true;
         }
     }
-
 }

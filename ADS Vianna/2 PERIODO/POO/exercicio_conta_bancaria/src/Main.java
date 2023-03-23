@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,7 +49,7 @@ public class Main {
         System.out.println("\n\n###############################################\nInformações da conta:\n");
         System.out.println("Número da conta: " + numero);
         System.out.println("Proprietario da conta: " + dono);
-        System.out.println("Saldo da conta: " + numero);
+        System.out.println("Saldo da conta: " + saldo);
         System.out.println("\n###############################################\n");
 
     }
