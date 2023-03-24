@@ -5,6 +5,7 @@ public class Conta {
     private String dono;
     protected double saldo; //protected é public para a propria classe e as classes filhas apenas
     private Banco banco;
+    private Cliente correntista;
 
     public Conta()
     {
@@ -40,6 +41,22 @@ public class Conta {
         if(valorDeposito > 0) {
             saldo += valorDeposito;
         }
+    }
+
+    public void setCorrentista(Cliente correntista){
+        this.correntista = correntista;
+    }
+
+    public Cliente getCorrentista( ){
+        return correntista;
+    }
+
+    public void setBanco(Banco banco){
+        this.banco = banco;
+    }
+
+    public Banco getBanco( ){
+        return banco;
     }
 
     public void sacar(double valorSaque)
