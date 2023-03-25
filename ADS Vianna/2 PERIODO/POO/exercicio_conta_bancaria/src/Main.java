@@ -3,45 +3,42 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+        /*
+        System.out.println("Informe o tipo de Conta (P)oupança ou (C)onta Especial?");
+        String resp = sc.next();
 
-        Conta conta = new Conta();
-
-        System.out.println("Olá o número da sua conta é: " + conta.getNumero() + " preencha as informações do seu cadastro:");
-
-        System.out.println("Insira seu nome: ");
-        conta.setDono(sc.next());
-
-        System.out.println("Insira o saldo inicial da conta: ");
-        conta.setSaldo(sc.nextDouble());
-
-        ImprimeInfoConta(conta.getNumero(), conta.getDono(), conta.getSaldo());
-
-        int op;
-        System.out.println("Deseja fazer alguma operação abaixo? ");
-        System.out.println("\n1 - Depositar\n2 - Sacar");
-        op = sc.nextInt();
-
-        switch (op)
-        {
-            case 1:
-                System.out.println("\n###############################################\nInsira o valor do depósito:");
-                conta.depositar(sc.nextDouble());
-                break;
-
-            case 2:
-                System.out.println("\n###############################################\nInsira o valor do saque:");
-                conta.sacar(sc.nextDouble());
-                break;
-
-            default:
-                System.out.println("Digito inválido.");
-                break;
+        Conta c = (resp.equals("P")) ? new Poupanca() : new ContaEspecial(); // o ternario nesse caso substitui o if abaixo
+        /*
+        if (resp.equals("P")){
+            c = new Poupanca();
+        }else{
+            c = new ContaEspecial();
         }
+        */
+        /*
 
-        ImprimeInfoConta(conta.getNumero(), conta.getDono(), conta.getSaldo());
+        System.out.println("Deposito inicial: ");
+        c.depositar(sc.nextDouble());
 
-        sc.close();
+        if(c instanceof ContaEspecial) // instance of verifica o tipo do objeto de 'c'
+        {
+            System.out.println("Informe o limite de crédito");
+            c.setLimite(sc.nextDouble());
+        }
+        */
+        Banco banco = new Banco();
+        System.out.println("# Informe o nome do Banco");
+        banco.setNome(sc.nextLine());
+
+        System.out.println("### SysBank ###");
+        System.out.println("###### MENU ######");
+        System.out.println("## 1) Cadastrar Cliente");
+        System.out.println("## 2) Cadastrar Conta");
+        System.out.println("## 3) Realizar operações");
+        System.out.println("## 4) Relatorios");
+        System.out.println("## 5) Sair");
     }
 
     public static void ImprimeInfoConta(int numero, String dono ,double saldo)
