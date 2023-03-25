@@ -9,7 +9,7 @@
 
  ex2:
 
-    Na função dividirDois a variavel "dois não existe", só existe no escopo da função somarDois, fora dela a variável não existe.
+    Na função dividirDois a variavel "dois" não existe, só existe no escopo da função somarDois, fora dela a variável não existe.
     
  ex3:
 
