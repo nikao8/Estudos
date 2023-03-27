@@ -11,29 +11,33 @@ function geraCalc()
         a: prompt("Insira valor de A"),
         b: prompt("Insira valor de B"),
         somar: function(){
-            return (this.a + this.b).toString()
+            let soma = this.a + this.b;
+            return (soma).toString();
         },
         subtrair: function(){
-            return (this.a - this.b).toString()
+            let sub = this.a - this.b;
+            return (sub).toString();
         },
         multiplicar: function(){
-            return (this.a * this.b).toString()
+            let mult = this.a * this.b;
+            return (mult).toString();
         },
         dividir(){
-            return (this.a / this.b).toString()
+            let divs = this.a / this.b;
+            return (divs).toString();
         }
     }
 
-    console.log(`Soma:: ${calculadora.somar()}`)
-    console.log(`Subtração:: ${calculadora.subtrair()}`)
-    console.log(`Divisao:: ${calculadora.dividir()}`)
-    console.log(`Multiplicação:: ${calculadora.multiplicar()}`)
+    console.log(`Soma:: ${calculadora.somar()}`);
+    console.log(`Subtração:: ${calculadora.subtrair()}`);
+    console.log(`Divisao:: ${calculadora.dividir()}`);
+    console.log(`Multiplicação:: ${calculadora.multiplicar()}`);
 }
 
 
 
-console.log(`Validade da cnh: ${cnh.validade.substring(6,10)}`)
-console.log(`Data validade formatada com /: ${cnh.validade.replaceAll('-','/')}`)
+console.log(`Validade da cnh: ${cnh.validade.substring(6,10)}`);
+console.log(`Data validade formatada com /: ${cnh.validade.replaceAll('-','/')}`);
 
 
 
