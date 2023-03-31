@@ -1,43 +1,44 @@
 import java.util.ArrayList;
 
-public class Cliente {
-    private String nome,cpf;
+public class Cliente
+{
+    private String nome, cpf;
     private double salario;
     private ArrayList<Conta> minhasContas;
-
+    
     public Cliente(){
         minhasContas = new ArrayList<Conta>();
     }
-    public ArrayList<Conta> getMinhasContas(){
+    
+    public ArrayList<Conta> getContas( ){
         return minhasContas;
     }
-
-    public void addConta(Conta conta)
-    {
-        minhasContas.add(conta);
+    
+    public void addConta(Conta c ){
+        minhasContas.add(c);
     }
-
-    public String getNome(){
-        return nome;
-    }
-
+    
     public void setNome(String nome){
         this.nome = nome;
     }
-
-    public String getCpf(){
-        return cpf;
+    
+    public String getNome( ){
+        return nome;
     }
-
+    
     public void setCpf(String cpf){
         this.cpf = cpf;
     }
-
-    public double getSalario(){
-        return salario;
+    
+    public String getCpf( ){
+        return cpf;
     }
-
+    
     public void setSalario(double salario){
         this.salario = salario;
+    }
+    
+    public double getSalario( ){
+        return salario;
     }
 }
