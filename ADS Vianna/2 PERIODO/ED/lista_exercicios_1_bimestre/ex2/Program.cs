@@ -2,7 +2,6 @@
 {
     private static void Main(string[] args)
     {
-        int cont = 0;
         int[] vet = new int[]{8,-3,-2,5,3,-5,3};
         Console.WriteLine("A quantidade de numeros negativos encontrado é: {0}", PercorreVetor(vet));
 
@@ -12,13 +11,13 @@
             Console.Write(vet[i] + " ");
         }
     }
-    /* // utilizando a função contadora
+    /* // utilizando a função empacotadora
     static int PercorreVetor(int[] vet)
     {
         return PercorreVetor(vet,0,0);
     }
     */
-    static int PercorreVetor(int[] vet, int i=0, int contador=0)
+    static int PercorreVetor(int[] vet, int i=0, int contador=0 /*não seria necessário o valor padrão caso usasse a função empacotadora*/)
     {
         if(i >= vet.Length)
         {
