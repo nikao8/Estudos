@@ -24,10 +24,10 @@ namespace Aula03
         
         // virtual sinaliza que o metodo pode ser sobreposto em outra classe com o override
         // abstract não possui implementação, quando há um metodo abstrato a classe tbm tem que ser abstrata
-        public abstract double GetSalario()
-        {
+        public abstract double GetSalario();
+        //{
             //return 0;
-        }
+        //}
 
     }
 }
