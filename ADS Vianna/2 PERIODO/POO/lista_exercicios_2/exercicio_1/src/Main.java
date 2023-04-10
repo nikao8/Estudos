@@ -8,7 +8,7 @@ public class Main {
 
         while(opcao != 4)
         {
-            System.out.println("#### ESCOLHA UMA OPÇÃO: ####");
+
             exibeMenu();
             opcao = sc.nextInt();
 
@@ -84,6 +84,7 @@ public class Main {
 
     public static void exibeMenu()
     {
+        System.out.println("\n#### ESCOLHA UMA OPÇÃO: ####");
         System.out.println("### MENU: ###");
         System.out.println("1 - Cadastrar alunos");
         System.out.println("2 - Realizar votação");

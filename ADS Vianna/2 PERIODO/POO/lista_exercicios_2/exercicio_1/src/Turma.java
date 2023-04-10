@@ -19,41 +19,33 @@ public class Turma {
     }
 
     public Aluno getAlunoGanhador() {
+        calculaMaisVotado();
         return alunoGanhador;
     }
 
-    public void setAlunoGanhador(Aluno alunoGanhador) {
+    /*public void setAlunoGanhador(Aluno alunoGanhador) {
         this.alunoGanhador = alunoGanhador;
-    }
+    }*/
 
     public void adicionaAluno(Aluno aluno)
     {
         alunos.add(aluno);
     }
 
-    public Aluno calculaMaisVotado()
+    private void calculaMaisVotado()
     {
-        int maiorQtdVotos = 0;
-        int qtdVotosTotal = 0;
-        //Aluno vencedor = new Aluno();
-        for (Aluno a : alunos)
+        int indiceVencedor = 0;
+
+        for(int i = 0; i < alunos.size(); i++)
         {
-            if(a.getQtdVotos() >= maiorQtdVotos)
+            if(alunos.get(i).getQtdVotos() >= alunos.get(indiceVencedor).getQtdVotos())
             {
-                maiorQtdVotos = a.getQtdVotos();
-
-            }
-            qtdVotosTotal += a.getQtdVotos();
-        }
-
-        for (Aluno a: alunos)
-        {
-            if(a.getQtdVotos() == maiorQtdVotos){
-                
+                indiceVencedor = i;
             }
         }
 
-
-        return vencedor;
+        //setAlunoGanhador(alunos.get(indiceVencedor));
+        this.alunoGanhador = alunos.get(indiceVencedor);
+        //return alunos.get(indiceVencedor);
     }
 }
