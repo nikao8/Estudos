@@ -48,4 +48,9 @@ public class Turma {
         this.alunoGanhador = alunos.get(indiceVencedor);
         //return alunos.get(indiceVencedor);
     }
+
+    public double calculaPercentualMaisVotado()
+    {
+        return (alunoGanhador.getQtdVotos() * 100) / (double)alunos.size();
+    }
 }
