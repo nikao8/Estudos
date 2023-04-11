@@ -7,14 +7,7 @@ public class Main {
 
         cadastroPopulacao(pop,sc);
         cadastraHabitante(pop);
-
-        System.out.println("\n### ESTATISCICAS DA POPULAÇÃO:");
-        System.out.println("# A maior altura é: " + pop.maiorAltura() + "\nA menor altura é: "+ pop.menorAltura() );
-        System.out.println("# A média de altura das mulheres é de: " + pop.mediaAlturaMulheres());
-        System.out.println("# O numero de homens na população é de: " + pop.quantidadeHomens());
-        System.out.println("# A porcentagem de mulheres na população é de: " + pop.porcentagemMulheres(false) + "%");
-        System.out.println("# A porcentagem de homens na população é de: " + pop.porcentagemHomens() + "%");
-        System.out.println("# A porcentagem de mulheres de idade entre 18 e 35 anos, olhos verdes e cabelos loiros: " + pop.porcentagemMulheres(true) + "%");
+        imprimeEstatisticas(pop);
     }
 
     public static void cadastroPopulacao(Populacao pop, Scanner sc){
@@ -22,7 +15,6 @@ public class Main {
         System.out.println("# Insira o nome da região da população: ");
         pop.setNomeRegiao(sc.next());
     }
-
 
     public static void cadastraHabitante(Populacao pop){
         Scanner sc = new Scanner(System.in);
@@ -65,4 +57,15 @@ public class Main {
             cont++;
         }
     }
+
+    public static void imprimeEstatisticas(Populacao pop){
+        System.out.println("\n### ESTATISCICAS DA POPULAÇÃO:");
+        System.out.println("# A maior altura é: " + pop.maiorAltura() + "\nA menor altura é: "+ pop.menorAltura() );
+        System.out.println("# A média de altura das mulheres é de: " + pop.mediaAlturaMulheres());
+        System.out.println("# O numero de homens na população é de: " + pop.quantidadeHomens());
+        System.out.println("# A porcentagem de mulheres na população é de: " + pop.porcentagemMulheres(false) + "%");
+        System.out.println("# A porcentagem de homens na população é de: " + pop.porcentagemHomens() + "%");
+        System.out.println("# A porcentagem de mulheres de idade entre 18 e 35 anos, olhos verdes e cabelos loiros: " + pop.porcentagemMulheres(true) + "%");
+    }
+
 }
