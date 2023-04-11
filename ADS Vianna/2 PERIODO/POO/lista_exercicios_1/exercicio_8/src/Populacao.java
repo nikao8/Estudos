@@ -59,7 +59,7 @@ public class Populacao {
 
         for(Habitante h : habitantes)
         {
-            if(String.valueOf(h.getSexo()).toLowerCase() == "f" )
+            if(h.getSexo() == 'f')
             {
                 contadorMulheres++;
             }
@@ -73,7 +73,7 @@ public class Populacao {
 
         for(Habitante h : habitantes)
         {
-            if(String.valueOf(h.getSexo()).toLowerCase() == "m" )
+            if(h.getSexo() == 'm' )
             {
                 contadorHomens++;
             }
@@ -87,7 +87,10 @@ public class Populacao {
 
         for (Habitante h : habitantes)
         {
-            somaAlturas += h.getAltura();
+            if(h.getSexo() == 'f')
+            {
+                somaAlturas += h.getAltura();
+            }
         }
 
         return somaAlturas / quantidadeMulheres();
@@ -108,7 +111,7 @@ public class Populacao {
 
             for (Habitante h : habitantes)
             {
-                if(String.valueOf(h.getSexo()).toLowerCase() == "f" && (h.getIdade() > 18 && h.getIdade() < 35) && String.valueOf(h.getCorCabelo()).toLowerCase() == "l" && String.valueOf(h.getCorOlho()).toLowerCase() == "v"){
+                if(h.getSexo() == 'f' && (h.getIdade() > 18 && h.getIdade() < 35) && h.getCorCabelo() == 'l' && h.getCorOlho() == 'v'){
                     qtdMulheresCondicionais++;
                 }
             }
