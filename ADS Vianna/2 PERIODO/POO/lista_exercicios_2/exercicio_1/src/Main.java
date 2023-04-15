@@ -8,7 +8,7 @@ public class Main {
 
         while(opcao != 4)
         {
-            System.out.println("#### ESCOLHA UMA OPÇÃO: ####");
+
             exibeMenu();
             opcao = sc.nextInt();
 
@@ -38,13 +38,18 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("o aluno mais votado foi: " + turma.getAlunoGanhador().getNome() + ", com " + turma.getAlunoGanhador().getQtdVotos() + " votos!");
+                    exibeResultadoVotacao(turma);
                     break;
 
                 case 4:
                     break;
             }
         }
+    }
+
+    public static void exibeResultadoVotacao(Turma turma)
+    {
+        System.out.println("O aluno mais votado foi: " + turma.getAlunoGanhador().getNome() + ", com " + turma.getAlunoGanhador().getQtdVotos() + " votos e um percentual de: " + turma.calculaPercentualMaisVotado() + "%.");
     }
 
     public static void computaVotoAluno(Turma turma, int id)
@@ -84,6 +89,7 @@ public class Main {
 
     public static void exibeMenu()
     {
+        System.out.println("\n#### ESCOLHA UMA OPÇÃO: ####");
         System.out.println("### MENU: ###");
         System.out.println("1 - Cadastrar alunos");
         System.out.println("2 - Realizar votação");

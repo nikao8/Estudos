@@ -24,7 +24,7 @@ public class Aluno {
     }
 
     public void setQtdVotos() {
-        this.qtdVotos += 1;
+        this.qtdVotos++;
     }
 
     public int getIdAluno()
