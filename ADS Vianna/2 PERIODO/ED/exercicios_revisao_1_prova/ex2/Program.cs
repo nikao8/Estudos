@@ -25,13 +25,9 @@
                 }
             }
 
-            // 35,22,68,15,78,7,74
-            // i = 35
-            // menor = 7
             aux = vet[menor];
             vet[menor] = vet[i];
             vet[i] = aux;
-
         }
 
     }
