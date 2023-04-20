@@ -24,13 +24,6 @@ public class Main {
             System.out.println("# Empate #.");
         }
     }
-    /*
-    public static int verificaTermino(Jogo jogo){
-        if(jogo.getTabuleiro().getnJogada() >= 9 && jogo.verificaResultado() == 0){
-            return 2;
-        }
-        return jogo.verificaResultado();
-    }*/
 
     public static void jogadaJogador1(Jogo jogo){
         Scanner sc = new Scanner(System.in);
