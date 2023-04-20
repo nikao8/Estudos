@@ -6,17 +6,24 @@ public class Jogo {
 
     public Jogo(){
         tabuleiro = new Tabuleiro();
-        jogador1 = new Jogador();
-        jogador2 = new Jogador();
+        jogador1 = new Jogador(1);
+        jogador2 = new Jogador(2);
         tentativas = new int[9];
     }
 
+    public boolean verificaResultado(){
+        if(tabuleiro.verificaJogo() == 1){
+            jogador1.setVencedor(true);
+            return true;
+        }
+        if(tabuleiro.verificaJogo() == 2){
+            jogador2.setVencedor(true);
+            return true;
+        }
+        return false;
+    }
     public Tabuleiro getTabuleiro() {
         return tabuleiro;
-    }
-
-    public void setTabuleiro(Tabuleiro tabuleiro) {
-        this.tabuleiro = tabuleiro;
     }
 
     public Jogador getJogador1() {
