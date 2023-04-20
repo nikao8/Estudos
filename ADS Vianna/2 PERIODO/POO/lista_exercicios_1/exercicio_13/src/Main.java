@@ -5,7 +5,7 @@ public class Main {
         Jogo jogo = new Jogo();
         Scanner sc = new Scanner(System.in);
 
-        while(verificaTermino(jogo) == 0) {
+        while(jogo.verificaTermino() == 0) {
             jogadaJogador1(jogo);
             jogadaJogador2(jogo);
         }
@@ -20,21 +20,22 @@ public class Main {
             System.out.println("Jogador [2] é o vencedor.");
         }
 
-        if(verificaTermino(jogo) == 2){
+        if(jogo.verificaTermino() == 2){
             System.out.println("# Empate #.");
         }
     }
+    /*
     public static int verificaTermino(Jogo jogo){
         if(jogo.getTabuleiro().getnJogada() >= 9 && jogo.verificaResultado() == 0){
             return 2;
         }
         return jogo.verificaResultado();
-    }
+    }*/
 
     public static void jogadaJogador1(Jogo jogo){
         Scanner sc = new Scanner(System.in);
 
-        if(verificaTermino(jogo) == 0){
+        if(jogo.verificaTermino() == 0){
             System.out.println("\nJogador [1] é a sua vez de jogar: " );
             jogo.getTabuleiro().exibeTabuleiro();
 
@@ -51,7 +52,7 @@ public class Main {
     public static void jogadaJogador2(Jogo jogo){
         Scanner sc = new Scanner(System.in);
 
-        if(verificaTermino(jogo) == 0){
+        if(jogo.verificaTermino() == 0){
             System.out.println("\nJogador [2] é a sua vez de jogar: " );
             jogo.getTabuleiro().exibeTabuleiro();
 

@@ -10,7 +10,7 @@ public class Jogo {
         jogador2 = new Jogador(-1);
     }
 
-    public int verificaResultado(){
+    private int verificaResultado(){
         if(tabuleiro.verificaLinha() == 1){
             jogador1.setVencedor(true);
             return 1;
@@ -39,6 +39,14 @@ public class Jogo {
 
         return 0;
     }
+
+    public int verificaTermino(){
+        if(tabuleiro.getnJogada() >= 9 && verificaResultado() == 0){
+            return 2;
+        }
+        return verificaResultado();
+    }
+
     public Tabuleiro getTabuleiro() {
         return tabuleiro;
     }
