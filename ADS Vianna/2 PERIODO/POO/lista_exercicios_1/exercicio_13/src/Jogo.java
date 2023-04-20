@@ -7,20 +7,37 @@ public class Jogo {
     public Jogo(){
         tabuleiro = new Tabuleiro();
         jogador1 = new Jogador(1);
-        jogador2 = new Jogador(2);
-        tentativas = new int[9];
+        jogador2 = new Jogador(-1);
     }
 
-    public boolean verificaResultado(){
-        if(tabuleiro.verificaJogo() == 1){
+    public int verificaResultado(){
+        if(tabuleiro.verificaLinha() == 1){
             jogador1.setVencedor(true);
-            return true;
+            return 1;
         }
-        if(tabuleiro.verificaJogo() == 2){
+        if(tabuleiro.verificaColuna() == 1){
+            jogador1.setVencedor(true);
+            return 1;
+        }
+        if(tabuleiro.verificaDiagonal() == 1){
+            jogador1.setVencedor(true);
+            return 1;
+        }
+
+        if(tabuleiro.verificaLinha() == -1){
             jogador2.setVencedor(true);
-            return true;
+            return -1;
         }
-        return false;
+        if(tabuleiro.verificaColuna() == -1){
+            jogador2.setVencedor(true);
+            return -1;
+        }
+        if(tabuleiro.verificaDiagonal() == -1){
+            jogador2.setVencedor(true);
+            return -1;
+        }
+
+        return 0;
     }
     public Tabuleiro getTabuleiro() {
         return tabuleiro;
@@ -42,11 +59,4 @@ public class Jogo {
         this.jogador2 = jogador2;
     }
 
-    public int[] getTentativas() {
-        return tentativas;
-    }
-
-    public void setTentativas(int[] tentativas) {
-        this.tentativas = tentativas;
-    }
 }

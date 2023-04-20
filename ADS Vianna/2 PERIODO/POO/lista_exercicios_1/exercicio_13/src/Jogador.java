@@ -3,6 +3,7 @@ public class Jogador {
     private boolean vencedor;
     public Jogador(int simbolo){
         this.vencedor = false;
+        this.simbolo = simbolo;
     }
 
     public boolean isVencedor() {
