@@ -6,8 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         while(jogo.verificaTermino() == 0) {
-            jogadaJogador1(jogo);
-            jogadaJogador2(jogo);
+            jogadaJogador(jogo,jogo.getJogador1(),1);
+            jogadaJogador(jogo,jogo.getJogador2(),2);
         }
 
         jogo.getTabuleiro().exibeTabuleiro();
@@ -25,11 +25,11 @@ public class Main {
         }
     }
 
-    public static void jogadaJogador1(Jogo jogo){
+    public static void jogadaJogador(Jogo jogo, Jogador jogador,int numJogador){
         Scanner sc = new Scanner(System.in);
 
         if(jogo.verificaTermino() == 0){
-            System.out.println("\nJogador [1] é a sua vez de jogar: " );
+            System.out.println("\nJogador ["+ numJogador +"] é a sua vez de jogar: " );
             jogo.getTabuleiro().exibeTabuleiro();
 
             int linha1, coluna1;
@@ -38,24 +38,8 @@ public class Main {
             System.out.print("Insira a coluna da jogada (0-2):");
             coluna1 = sc.nextInt();
 
-            jogo.getTabuleiro().realizaJogada(linha1,coluna1,jogo.getJogador1().getSimbolo());
+            jogo.getTabuleiro().realizaJogada(linha1,coluna1,jogador.getSimbolo());
         }
     }
 
-    public static void jogadaJogador2(Jogo jogo){
-        Scanner sc = new Scanner(System.in);
-
-        if(jogo.verificaTermino() == 0){
-            System.out.println("\nJogador [2] é a sua vez de jogar: " );
-            jogo.getTabuleiro().exibeTabuleiro();
-
-            int linha2, coluna2;
-            System.out.print("Insira a linha da jogada (0-2):");
-            linha2 = sc.nextInt();
-            System.out.print("Insira a coluna da jogada (0-2):");
-            coluna2 = sc.nextInt();
-
-            jogo.getTabuleiro().realizaJogada(linha2,coluna2,jogo.getJogador2().getSimbolo());
-        }
-    }
 }
