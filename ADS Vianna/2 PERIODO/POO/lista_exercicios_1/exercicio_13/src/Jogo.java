@@ -2,7 +2,6 @@ public class Jogo {
     private Tabuleiro tabuleiro;
     private Jogador jogador1;
     private Jogador jogador2;
-    private int[] tentativas;
 
     public Jogo(){
         tabuleiro = new Tabuleiro();
