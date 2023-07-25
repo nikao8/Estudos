@@ -13,6 +13,7 @@ public class Cartao {
     public Cartao(double limite) {
         this.numero = generateRandomCardNumber();
         this.limite = limite;
+        this.compras = new ArrayList<Compra>();
     }
 
     public String getNumero() {
@@ -27,7 +28,7 @@ public class Cartao {
         return compras;
     }
 
-    private boolean contabilizaCompra(Compra c){
+    public boolean contabilizaCompra(Compra c){
         if(c.getPreco() > this.limite){
             return false;
         }
@@ -48,7 +49,6 @@ public class Cartao {
 
             numero += String.valueOf(ThreadLocalRandom.current().nextInt(0, 9));
         }
-        ThreadLocalRandom.current().nextInt();
 
         return numero;
     }

@@ -1,6 +1,6 @@
 package br.com.alura.desafio.model;
 
-public class Compra {
+public class Compra implements Comparable<Compra>{
     private String nome;
     private double preco;
 
@@ -18,5 +18,10 @@ public class Compra {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public int compareTo(Compra outraCompra) {
+        return Double.valueOf(this.preco).compareTo(Double.valueOf(outraCompra.preco));
     }
 }
