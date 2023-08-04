@@ -1,14 +1,14 @@
 package br.com.alura.screenmatch.modelos;
 
+import br.com.alura.screenmatch.exceptions.ErroAnoInvalidoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
 
     // @SerializedName é utilizado para liga o atributo da minha classe a chave do JSON, que no caso é Title
-    @SerializedName("Title")
+
     private String nome;
 
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -22,7 +22,12 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
+        if(meuTituloOmdb.year().length() > 4) {
+            throw new ErroAnoInvalidoException("Erro! O ano do filme possui mais de 4 caracteres");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+
         // substring foi feito para tirar o " min" que vem do json e conseguir transformar a string do JSON para int, que é o tipo de dado do atributo
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, meuTituloOmdb.runtime().length() - 4));
     }
