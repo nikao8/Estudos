@@ -1,1 +1,0 @@
-# Diretório direcionado a codigos na linguagem Python
