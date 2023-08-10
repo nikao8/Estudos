@@ -46,19 +46,6 @@ func retornaListaSites() []string {
 	return list[:]
 }
 
-func exibeMenu() {
-	fmt.Println("1 - Iniciar monitoramento")
-	fmt.Println("2 - Exibir logs")
-	fmt.Println("0 - Finalizar execução do programa")
-}
-
-func solicitaLeitura() int {
-	var opcao int
-	//fmt.Scanf("%d", &opcao)
-	fmt.Scan(&opcao) // Com o comando Scan, ele faz a inferencia de tipo de variavel
-	return opcao
-}
-
 func iniciarMonitoramento(sites []string) {
 	fmt.Println("Monitorando...")
 
@@ -73,4 +60,17 @@ func iniciarMonitoramento(sites []string) {
 		}
 	}
 
+}
+
+func exibeMenu() {
+	fmt.Println("1 - Iniciar monitoramento")
+	fmt.Println("2 - Exibir logs")
+	fmt.Println("0 - Finalizar execução do programa")
+}
+
+func solicitaLeitura() int {
+	var opcao int
+	//fmt.Scanf("%d", &opcao)
+	fmt.Scan(&opcao) // Com o comando Scan, ele faz a inferencia de tipo de variavel
+	return opcao
 }
