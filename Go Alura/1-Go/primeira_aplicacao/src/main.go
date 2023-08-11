@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -20,7 +23,8 @@ func main() {
 
 		switch op {
 		case 1:
-			iniciarMonitoramento(retornaListaSites())
+			//iniciarMonitoramento(retornaListaSites())
+			iniciarMonitoramento(leSitesTxt())
 
 		case 2:
 			fmt.Println("Exibindo logs...")
@@ -37,6 +41,7 @@ func main() {
 
 }
 
+/*
 func retornaListaSites() []string {
 
 	list := []string{}
@@ -60,6 +65,7 @@ func retornaListaSites() []string {
 
 	return list
 }
+*/
 
 func iniciarMonitoramento(sites []string) {
 	fmt.Println("Monitorando...")
@@ -108,4 +114,37 @@ func solicitaLeitura() int {
 	//fmt.Scanf("%d", &opcao)
 	fmt.Scan(&opcao) // Com o comando Scan, ele faz a inferencia de tipo de variavel
 	return opcao
+}
+
+func leSitesTxt() []string {
+	const filePath = "../cfg/sites.txt"
+
+	var sites []string
+
+	arquivo, err := os.Open(filePath)
+	//arquivo, err := os.ReadFile(filePath)
+
+	if err != nil {
+		//if _, err1 := os.Stat(filePath); err1 != nil {
+		//	os.Create(filePath)
+		//} else {
+		fmt.Println("Houve um erro ao abrir o arquivo:", err)
+		//}
+	} else {
+		reader := bufio.NewReader(arquivo)
+
+		for {
+			linha, err := reader.ReadString('\n')
+			linha = strings.TrimSpace(linha)
+
+			sites = append(sites, linha)
+
+			if err == io.EOF {
+				break
+			}
+		}
+
+	}
+
+	return sites
 }
