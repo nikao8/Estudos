@@ -117,7 +117,7 @@ func solicitaLeitura() int {
 }
 
 func leSitesTxt() []string {
-	const filePath = "../cfg/sites.txt"
+	const filePath = "sites.txt"
 
 	var sites []string
 
@@ -125,11 +125,11 @@ func leSitesTxt() []string {
 	//arquivo, err := os.ReadFile(filePath)
 
 	if err != nil {
-		//if _, err1 := os.Stat(filePath); err1 != nil {
-		//	os.Create(filePath)
-		//} else {
-		fmt.Println("Houve um erro ao abrir o arquivo:", err)
-		//}
+		if _, err1 := os.Stat(filePath); err1 != nil {
+			os.Create(filePath)
+		} else {
+			fmt.Println("Houve um erro ao abrir o arquivo:", err)
+		}
 	} else {
 		reader := bufio.NewReader(arquivo)
 
@@ -145,6 +145,6 @@ func leSitesTxt() []string {
 		}
 
 	}
-
+	fmt.Println(sites)
 	return sites
 }
