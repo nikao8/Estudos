@@ -1,0 +1,10 @@
+Data/Hora: 14/08/2023 11:19:17 | https://www.alura.com.br - online: true
+Data/Hora: 14/08/2023 11:19:18 | https://random-status-code.herokuapp.com - online: false
+Data/Hora: 14/08/2023 11:19:23 | https://www.alura.com.br - online: true
+Data/Hora: 14/08/2023 11:19:24 | https://random-status-code.herokuapp.com - online: false
+Data/Hora: 14/08/2023 11:19:29 | https://www.alura.com.br - online: true
+Data/Hora: 14/08/2023 11:19:29 | https://random-status-code.herokuapp.com - online: false
+Data/Hora: 14/08/2023 11:19:35 | https://www.alura.com.br - online: true
+Data/Hora: 14/08/2023 11:19:35 | https://random-status-code.herokuapp.com - online: false
+Data/Hora: 14/08/2023 11:19:40 | https://www.alura.com.br - online: true
+Data/Hora: 14/08/2023 11:19:41 | https://random-status-code.herokuapp.com - online: false

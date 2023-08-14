@@ -6,12 +6,15 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
 
 const ondas = 5
 const delay = 5
+const filePathLog = "log.txt"
+const filePathSites = "sites.txt"
 
 func main() {
 
@@ -28,7 +31,7 @@ func main() {
 
 		case 2:
 			fmt.Println("Exibindo logs...")
-
+			imprimeLogs()
 		case 0:
 			fmt.Print("Finalizando programa...")
 			os.Exit(0)
@@ -41,43 +44,9 @@ func main() {
 
 }
 
-/*
-func retornaListaSites() []string {
-
-	list := []string{}
-
-	for {
-		fmt.Println("Insira um site para adicionar a lista de monitoramento:")
-
-		var site string
-		fmt.Scan(&site)
-		list = append(list, site)
-
-		fmt.Println("Deseja adicionar mais sites? 1-Sim | 2-Não")
-		var esc int
-		fmt.Scan(&esc)
-
-		if esc != 1 {
-			break
-		}
-
-	}
-
-	return list
-}
-*/
-
 func iniciarMonitoramento(sites []string) {
 	fmt.Println("Monitorando...")
 	fmt.Println("")
-
-	/*
-		for i := 0; i < len(sites); i++ {
-			testaSite(site[i])
-		}
-	*/
-
-	//usando for com range (poderia colocar o contador i ao inves de _ caso fosse necessário trabalhar com o contador)
 
 	for i := 0; i < ondas; i++ {
 
@@ -89,18 +58,25 @@ func iniciarMonitoramento(sites []string) {
 		fmt.Println("")
 		time.Sleep(delay * time.Second)
 	}
-
 }
 
 func testaSite(site string) {
 	resp, err := http.Get(site)
+	status := false
 
 	if err != nil {
 		fmt.Println("Houve um erro ao requisitar o site", site, ":")
 		fmt.Println(err.Error())
 	} else {
+
+		if resp.StatusCode == 200 {
+			status = true
+		}
+
 		fmt.Println("StatusCode de ", site, ":", resp.Status)
 	}
+
+	registraLog(site, status)
 }
 
 func exibeMenu() {
@@ -117,19 +93,15 @@ func solicitaLeitura() int {
 }
 
 func leSitesTxt() []string {
-	const filePath = "sites.txt"
 
 	var sites []string
 
-	arquivo, err := os.Open(filePath)
-	//arquivo, err := os.ReadFile(filePath)
+	arquivo, err := os.OpenFile(filePathSites, os.O_RDWR|os.O_CREATE, 0666)
+
+	defer arquivo.Close()
 
 	if err != nil {
-		if _, err1 := os.Stat(filePath); err1 != nil {
-			os.Create(filePath)
-		} else {
-			fmt.Println("Houve um erro ao abrir o arquivo:", err)
-		}
+		fmt.Println("Houve um erro ao abrir o arquivo:", err)
 	} else {
 		reader := bufio.NewReader(arquivo)
 
@@ -148,10 +120,33 @@ func leSitesTxt() []string {
 	}
 
 	if len(sites) == 0 {
-		fmt.Println("o arquivo", filePath, "está vazio, preencha-o e tente novamente")
+		fmt.Println("o arquivo", filePathSites, "está vazio, preencha-o e tente novamente")
 		os.Exit(0)
 	}
-	arquivo.Close()
+
 	fmt.Println(sites)
 	return sites
+}
+
+func registraLog(site string, status bool) {
+	arquivo, err := os.OpenFile(filePathLog, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+
+	defer arquivo.Close()
+
+	if err != nil {
+		fmt.Println("Houve um erro ao abrir o arquivo de logs:", err)
+	}
+
+	arquivo.WriteString("Data/Hora: " + time.Now().Format("02/01/2006 15:04:05") + " | " + site + " - online: " + strconv.FormatBool(status) + "\n")
+
+}
+
+func imprimeLogs() {
+	arquivo, err := os.ReadFile(filePathLog)
+
+	if err != nil {
+		fmt.Println("Houve um erro ao abrir o arquivo de logs:", err)
+	} else {
+		fmt.Println(string(arquivo))
+	}
 }
