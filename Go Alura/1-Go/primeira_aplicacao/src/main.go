@@ -139,12 +139,19 @@ func leSitesTxt() []string {
 
 			sites = append(sites, linha)
 
+			// verifica o fim do arquivo
 			if err == io.EOF {
 				break
 			}
 		}
 
 	}
+
+	if len(sites) == 0 {
+		fmt.Println("o arquivo", filePath, "está vazio, preencha-o e tente novamente")
+		os.Exit(0)
+	}
+	arquivo.Close()
 	fmt.Println(sites)
 	return sites
 }
