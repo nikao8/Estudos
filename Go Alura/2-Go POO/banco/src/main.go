@@ -1,28 +1,24 @@
 package main
 
 import (
+	"banco/contas"
+	"banco/pessoas"
 	"fmt"
 )
 
-type ContaCorrente struct {
-	titular       string
-	numeroAgencia int
-	numeroConta   int
-	saldo         float64
-}
-
 func main() {
-	/*
-		var contaNicolas ContaCorrente
-		contaNicolas = ContaCorrente{"nikao", 1111, 1122, 2500.0}
-	*/
+	contaDoFulano := contas.ContaCorrente{}
+	contaDoFulano.Titular = pessoas.Titular{Nome: "Fulano", Cpf: "00000000000", Profissao: "Pedreiro"}
+	contaDoFulano.NumeroAgencia = 001
+	contaDoFulano.NumeroConta = 1023
+	contaDoFulano.Depositar(500.0)
 
-	// contaNicolas := ContaCorrente{titular:"nikao", numeroAgencia:1111, numeroConta:1122, saldo:2500.0}
+	pessoaJuca := pessoas.Titular{Nome: "Juca", Cpf: "00000000001", Profissao: "Cozinheiro"}
+	contaDoJuca := contas.ContaCorrente{Titular: pessoaJuca, NumeroAgencia: 123, NumeroConta: 0321}
+	contaDoJuca.Depositar(800.0)
 
-	contaNicolas := ContaCorrente{"nikao", 1111, 1122, 2500.0}
+	contaDoFulano.Transferir(100, &contaDoJuca)
 
-	fmt.Print("Titular: ", contaNicolas.titular, "\n",
-		"Numero Agenc: ", contaNicolas.numeroAgencia, "\n",
-		"Numero Conta: ", contaNicolas.numeroConta, "\n",
-		"Saldo: ", contaNicolas.saldo)
+	fmt.Println(contaDoFulano.GetSaldo(), contaDoJuca.GetSaldo())
+
 }
