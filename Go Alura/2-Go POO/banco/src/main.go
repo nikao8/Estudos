@@ -2,6 +2,7 @@ package main
 
 import (
 	"banco/contas"
+	"banco/contas/i"
 	"banco/pessoas"
 	"fmt"
 )
@@ -21,4 +22,19 @@ func main() {
 
 	fmt.Println(contaDoFulano.GetSaldo(), contaDoJuca.GetSaldo())
 
+	pessoaLeo := pessoas.Titular{Nome: "Leo", Cpf: "00000000002", Profissao: "Caminhoneiro"}
+	contaDoLeo := contas.ContaPoupanca{NumeroAgencia: 777, NumeroConta: 545, Titular: pessoaLeo}
+
+	fmt.Println(contaDoLeo)
+
+	// Interface : Tanto ContaCorrente quanto ContaPoupanca implementam a interface IConta por implementar os metodos que a interface obriga
+	// desta forma quando uma struct implementa todos os metodos de uma interface, essa struct implementa a interface
+
+	var contaDoNicolasPoupanca i.IConta
+	contaDoNicolasPoupanca = &contas.ContaPoupanca{}
+
+	var contaDoNicolasCorrente i.IConta
+	contaDoNicolasCorrente = &contas.ContaCorrente{}
+
+	fmt.Println(contaDoNicolasCorrente, contaDoNicolasPoupanca)
 }
