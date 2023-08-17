@@ -51,3 +51,7 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/", 301)
 }
+
+func Edit(w http.ResponseWriter, r *http.Request) {
+	tmps.ExecuteTemplate(w, "Edit", nil)
+}

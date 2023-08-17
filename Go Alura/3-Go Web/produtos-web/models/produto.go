@@ -82,3 +82,7 @@ func DeleteProduto(id int) {
 
 	delete.Exec(id)
 }
+
+func BuscaProduto(id int) Produto {
+	return nil
+}
