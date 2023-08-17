@@ -39,3 +39,15 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 	}
 	http.Redirect(w, r, "/", 301)
 }
+
+func Delete(w http.ResponseWriter, r *http.Request) {
+	idProd, err := strconv.Atoi(r.URL.Query().Get("id"))
+
+	if err != nil {
+		log.Println("Erro na conversão de id:", err)
+	}
+
+	models.DeleteProduto(idProd)
+
+	http.Redirect(w, r, "/", 301)
+}
