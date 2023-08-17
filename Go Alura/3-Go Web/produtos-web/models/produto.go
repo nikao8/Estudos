@@ -1,6 +1,7 @@
 package models
 
 import (
+	"log"
 	"produtos-web/database"
 )
 
@@ -46,4 +47,22 @@ func BuscaTodosProdutos() []Produto {
 	}
 
 	return produtos
+}
+
+func CriarNovoProduto(nome, descricao string, preco float64, quantidade int) {
+
+	db := database.ConectaPg()
+	defer db.Close()
+
+	sql := `INSERT INTO public.produtos
+	(nome, descricao, preco, quantidade)
+	VALUES($1, $2, $3, $4);`
+
+	insert, err := db.Prepare(sql)
+
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	insert.Exec(nome, descricao, preco, quantidade)
 }
