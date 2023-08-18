@@ -16,7 +16,7 @@ func BuscaTodosProdutos() []Produto {
 	db := database.ConectaPg()
 	defer db.Close()
 
-	sql := "select * from produtos;"
+	sql := "select * from produtos order by id asc;"
 
 	resultConsulta, err := db.Query(sql)
 
@@ -50,7 +50,7 @@ func BuscaTodosProdutos() []Produto {
 	return produtos
 }
 
-func CriarNovoProduto(nome, descricao string, preco float64, quantidade int) {
+func CriarNovoProduto(p Produto) {
 
 	db := database.ConectaPg()
 	defer db.Close()
@@ -65,7 +65,7 @@ func CriarNovoProduto(nome, descricao string, preco float64, quantidade int) {
 		log.Fatal(err.Error())
 	}
 
-	insert.Exec(nome, descricao, preco, quantidade)
+	insert.Exec(p.Nome, p.Descricao, p.Preco, p.Quantidade)
 }
 
 func DeleteProduto(id int) {
@@ -84,5 +84,44 @@ func DeleteProduto(id int) {
 }
 
 func BuscaProduto(id int) Produto {
-	return nil
+	db := database.ConectaPg()
+	defer db.Close()
+
+	produtoBanco, err := db.Query("select * from public.produtos where id=$1", id)
+
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	produtoBanco.Next()
+
+	var quantidade int
+	var nome, descricao string
+	var preco float64
+
+	err = produtoBanco.Scan(&id, &nome, &descricao, &preco, &quantidade)
+
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	return Produto{id, nome, descricao, preco, quantidade}
+
+}
+
+func AtualizaProduto(p Produto) {
+	db := database.ConectaPg()
+	defer db.Close()
+
+	sql := `UPDATE public.produtos
+	SET nome=$1, descricao=$2, preco=$3, quantidade=$4
+	WHERE id=$5;`
+
+	update, err := db.Prepare(sql)
+
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	update.Exec(p.Nome, p.Descricao, p.Preco, p.Quantidade, p.Id)
 }
