@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"api-rest/database"
 	"api-rest/models"
 	"encoding/json"
 	"fmt"
@@ -16,7 +17,14 @@ func Home(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
-	json.NewEncoder(w).Encode(models.Personalidades)
+
+	var pers []models.Personalidade
+
+	db := database.ConectaPostgres()
+
+	db.Find(&pers)
+
+	json.NewEncoder(w).Encode(pers)
 }
 
 func RetornaPersonalidade(w http.ResponseWriter, r *http.Request) {
@@ -28,9 +36,21 @@ func RetornaPersonalidade(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err.Error())
 	}
 
-	for _, personalidade := range models.Personalidades {
-		if personalidade.Id == id {
-			json.NewEncoder(w).Encode(personalidade)
-		}
-	}
+	var p models.Personalidade
+
+	db := database.ConectaPostgres()
+	db.First(&p, id)
+	json.NewEncoder(w).Encode(p)
+}
+
+func CriaPersonalidade(w http.ResponseWriter, r *http.Request) {
+	var per models.Personalidade
+
+	json.NewDecoder(r.Body).Decode(&per)
+
+	db := database.ConectaPostgres()
+
+	db.Create(&per)
+
+	json.NewEncoder(w).Encode(per)
 }

@@ -15,4 +15,5 @@ func main() {
 
 	fmt.Println("Iniciando o servidor...")
 	routes.HandleRequest()
+
 }
