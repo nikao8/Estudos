@@ -37,6 +37,10 @@ func CriaAluno(c *gin.Context) {
 		return
 	}
 
+	if ExibeErroValidacao(&aluno, c) {
+		return
+	}
+
 	db := database.ConectaPostgres()
 
 	db.Create(&aluno)
@@ -91,6 +95,10 @@ func EditaAluno(c *gin.Context) {
 		return
 	}
 
+	if ExibeErroValidacao(&aluno, c) {
+		return
+	}
+
 	db.Model(&aluno).UpdateColumns(aluno)
 	c.JSON(http.StatusOK, aluno)
 }
@@ -110,4 +118,17 @@ func BuscaAlunoCPF(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, aluno)
+}
+
+func ExibeErroValidacao(aluno *models.Aluno, c *gin.Context) bool {
+	err := models.ValidaDadosDeAluno(aluno)
+
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return true
+	}
+
+	return false
 }
