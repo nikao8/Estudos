@@ -132,3 +132,17 @@ func ExibeErroValidacao(aluno *models.Aluno, c *gin.Context) bool {
 
 	return false
 }
+
+func ExibePaginaIndex(c *gin.Context) {
+	var alunos []models.Aluno
+	db := database.ConectaPostgres()
+	db.Find(&alunos)
+
+	c.HTML(http.StatusOK, "index.html", gin.H{
+		"alunos": alunos,
+	})
+}
+
+func ExibePagina404(c *gin.Context) {
+	c.HTML(http.StatusNotFound, "404.html", nil)
+}
