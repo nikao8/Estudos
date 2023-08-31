@@ -3,8 +3,6 @@ package main
 import (
 	"net/http"
 	"produtos-web/routes"
-
-	_ "github.com/lib/pq"
 )
 
 func main() {
