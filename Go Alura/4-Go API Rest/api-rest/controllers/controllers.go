@@ -36,6 +36,12 @@ func RetornaPersonalidade(w http.ResponseWriter, r *http.Request) {
 	}
 
 	p := RetornaPersonalidadeId(id)
+
+	if p.Id == 0 {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
 	json.NewEncoder(w).Encode(p)
 }
 
@@ -62,6 +68,11 @@ func DeletaPersonalidade(w http.ResponseWriter, r *http.Request) {
 
 	p := RetornaPersonalidadeId(id)
 
+	if p.Id == 0 {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
 	db := database.ConectaPostgres()
 
 	db.Delete(&p, id)
@@ -79,6 +90,11 @@ func EditaPersonalidade(w http.ResponseWriter, r *http.Request) {
 	}
 
 	p := RetornaPersonalidadeId(id)
+
+	if p.Id == 0 {
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
 
 	json.NewDecoder(r.Body).Decode(&p)
 
