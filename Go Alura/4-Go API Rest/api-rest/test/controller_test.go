@@ -4,6 +4,7 @@ import (
 	"api-rest/controllers"
 	"api-rest/database"
 	"api-rest/models"
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -91,4 +92,29 @@ func TestDeletaPersonalidade(t *testing.T) {
 	if !resEqual {
 		DeletaPersonalidadeMock()
 	}
+}
+
+func TestEditaPersonalidade(t *testing.T) {
+	CriaPersonalidadeMock()
+	defer DeletaPersonalidadeMock()
+
+	r := SetupRotasTeste()
+	r.HandleFunc("/api/personalidades/{id}", controllers.EditaPersonalidade).Methods("Put")
+
+	personalidade := models.Personalidade{Nome: "Novo nome", Historia: "Nova Historia"}
+	personalidadeJson, _ := json.Marshal(personalidade)
+
+	pathEdit := "/api/personalidades/" + strconv.Itoa(ID)
+	req, _ := http.NewRequest("PUT", pathEdit, bytes.NewBuffer(personalidadeJson))
+	resposta := httptest.NewRecorder()
+	r.ServeHTTP(resposta, req)
+
+	var personalidadeEditada models.Personalidade
+	json.Unmarshal(resposta.Body.Bytes(), &personalidadeEditada)
+
+	assert.Equal(t, http.StatusOK, resposta.Code)
+	assert.Equal(t, "Novo nome", personalidadeEditada.Nome, "Nome deve ser igual!")
+	assert.Equal(t, "Nova Historia", personalidadeEditada.Historia, "Historia deve ser igual!")
+	assert.NotEmpty(t, personalidadeEditada.Nome, "Nome vazio!")
+	assert.NotEmpty(t, personalidadeEditada.Historia, "Historia vazia!")
 }
