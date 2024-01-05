@@ -1,5 +1,7 @@
 package internal_errors
 
-import "errors"
+import (
+	"fmt"
+)
 
-var ErrInternal error = errors.New("Internal server error")
+var ErrInternal error = fmt.Errorf(fmt.Sprintf("Internal server error%s", ""))

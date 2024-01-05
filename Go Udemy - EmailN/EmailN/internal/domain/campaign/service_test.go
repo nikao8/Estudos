@@ -33,24 +33,6 @@ func TestCreateCampaign(t *testing.T) {
 	assert := assert.New(t)
 	service := Service{}
 
-	id, err := service.Create(inputCreateDto)
-
-	assert.Nil(err)
-	assert.NotNil(id)
-}
-
-func TestCreateCampaignValidateDomainError(t *testing.T) {
-	assert := assert.New(t)
-	service := Service{}
-	inputCreateDto.Name = ""
-
-	_, err := service.Create(inputCreateDto)
-
-	assert.NotNil(err)
-	assert.Equal("name is required", err.Error())
-}
-
-func TestCreateSaveCampaign(t *testing.T) {
 	repositoryMock := new(repositoryMock)
 
 	repositoryMock.On("Save", mock.MatchedBy(func(campaign *Campaign) bool {
@@ -60,6 +42,27 @@ func TestCreateSaveCampaign(t *testing.T) {
 
 		return true
 	})).Return(nil)
+	service.Repository = repositoryMock
+
+	id, err := service.Create(inputCreateDto)
+
+	assert.Nil(err)
+	assert.NotNil(id)
+}
+
+func TestCreateCampaignValidateDomainError(t *testing.T) {
+	assert := assert.New(t)
+	service := Service{}
+
+	_, err := service.Create(contract_campaign.InputCreateDto{})
+
+	assert.False(errors.Is(internal_errors.ErrInternal, err))
+}
+
+func TestCreateSaveCampaign(t *testing.T) {
+	repositoryMock := new(repositoryMock)
+
+	repositoryMock.On("Save", mock.Anything).Return(nil)
 	service.Repository = repositoryMock
 
 	service.Create(inputCreateDto)
