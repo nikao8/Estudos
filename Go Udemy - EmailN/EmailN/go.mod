@@ -3,12 +3,15 @@ module EmailN
 go 1.21.0
 
 require (
+	github.com/go-chi/chi/v5 v5.0.11
+	github.com/go-chi/render v1.0.3
 	github.com/go-playground/validator/v10 v10.16.0
 	github.com/rs/xid v1.5.0
 	github.com/stretchr/testify v1.8.4
 )
 
 require (
+	github.com/ajg/form v1.5.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect

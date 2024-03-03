@@ -21,9 +21,9 @@ func ValidateStruct(obj interface{}) error {
 	case "required":
 		return fmt.Errorf(fmt.Sprintf("O campo %s é obrigatório", validationError.Field()))
 	case "max":
-		return fmt.Errorf(fmt.Sprintf("O valor %s do campo %s ultrapassa o limite máximo", validationError.Field(), validationError.Field()))
+		return fmt.Errorf(fmt.Sprintf("O valor do campo %s ultrapassa o limite máximo de %s", validationError.Field(), validationError.Param()))
 	case "min":
-		return fmt.Errorf(fmt.Sprintf("O valor %s do campo %s não atingiu o mínimo", validationError.Param(), validationError.Field()))
+		return fmt.Errorf(fmt.Sprintf("O valor do campo %s não atingiu o mínimo de %s", validationError.Field(), validationError.Param()))
 	case "email":
 		return fmt.Errorf(fmt.Sprintf("O valor %s não é um email válido", validationError.Param()))
 	default:

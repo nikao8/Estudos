@@ -2,7 +2,6 @@ package domain_campaign
 
 import (
 	contract_campaign "EmailN/internal/contract/campaign"
-	internal_errors "EmailN/internal/errors"
 )
 
 type Service struct {
@@ -16,11 +15,11 @@ func (s *Service) Create(inputDto contract_campaign.InputCreateDto) (string, err
 		return "", err
 	}
 
-	err = s.Repository.Save(campaign)
+	/*err = s.Repository.Save(campaign)
 
 	if err != nil {
 		return "", internal_errors.ErrInternal
-	}
+	}*/
 
 	return campaign.ID, err
 }
